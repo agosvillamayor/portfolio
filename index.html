@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Agostina Villamayor</title>
+<meta name="description" content="Portfolio of Agostina Villamayor, senior graphic designer working across design, AI and data.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agostina Villamayor · Senior Graphic Designer">
+<meta property="og:description" content="I design the brand, then I build the tools that produce it. Design, AI and data.">
+<meta property="og:image" content="https://agostinavillamayor.netlify.app/og-image.jpg">
+<meta property="og:url" content="https://agostinavillamayor.netlify.app/">
+<link rel="canonical" href="https://agostinavillamayor.netlify.app/">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;700;800&family=Playfair+Display:ital,wght@1,700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* ============================================================
+   Layout concept: light, iridescent editorial portfolio.
+   A full-bleed holographic hero and a dark footer bookend a
+   centered 1120px column of case studies on near-white paper.
+   Tokens are Agostina's own "Online Agostina" design system.
+   Deliberately single (light) theme: the brand is a high-key
+   pastel world, so dark mode is intentionally not offered.
+   ============================================================ */
+:root{
+  color-scheme: light;
+
+  /* Violet primary ramp */
+  --violet-50:#f6f3ff; --violet-100:#ede8ff; --violet-200:#dcd2ff;
+  --violet-300:#c3b2ff; --violet-400:#a585fd; --violet-500:#9465fd;
+  --violet-600:#7c3aed; --violet-700:#6726c9; --violet-800:#511c9e; --violet-900:#3a1574;
+
+  /* Iridescent spectrum */
+  --iris-violet:#9465fd; --iris-periwinkle:#9593ff; --iris-mint:#bcf3c8;
+  --iris-aqua:#c2f4df; --iris-yellow:#feed7a; --iris-gold:#fed547;
+  --iris-coral:#ffb6ad; --iris-peach:#ffbc9d; --iris-pink:#ffbdc5;
+  --iris-rose:#e9afc6; --iris-lilac:#ebc8e1;
+
+  /* Neutrals (violet-tinted) */
+  --ink-900:#1d1b26; --ink-800:#2b2833; --ink-700:#3d3a48; --ink-600:#57535f;
+  --ink-500:#757181; --ink-400:#9b97a6; --ink-300:#c6c2d2; --ink-200:#e5e1ee;
+  --ink-100:#f2eff8; --ink-50:#faf8fd; --white:#ffffff;
+
+  /* Semantic */
+  --text-strong:var(--ink-900); --text-body:var(--ink-700); --text-muted:var(--ink-500);
+  --text-faint:var(--ink-400); --text-inverse:var(--white); --text-brand:var(--violet-600);
+  --surface-page:var(--ink-50); --surface-card:var(--white); --surface-tint:var(--violet-50);
+  --surface-tint-2:var(--violet-100); --surface-inverse:var(--ink-900);
+  --border-subtle:var(--ink-200); --border-default:var(--ink-300); --border-brand:var(--violet-300);
+  --brand:var(--violet-500); --brand-hover:var(--violet-600); --brand-active:var(--violet-700);
+  --ring:rgba(148,101,253,.5);
+
+  /* Type */
+  --font-display:'Cormorant Garamond','Playfair Display',Georgia,serif;
+  --font-sans:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  --tracking-wide:.08em; --tracking-wider:.18em;
+
+  /* Spacing */
+  --gutter-section:clamp(64px,9vw,120px);
+  --container:1120px; --container-wide:1200px;
+
+  /* Radius */
+  --radius-sm:10px; --radius-md:16px; --radius-lg:24px; --radius-xl:32px; --radius-pill:999px;
+
+  /* Shadows (violet-tinted) */
+  --shadow-xs:0 1px 2px rgba(58,21,116,.06);
+  --shadow-sm:0 2px 8px rgba(58,21,116,.07);
+  --shadow-md:0 8px 24px rgba(58,21,116,.10);
+  --shadow-lg:0 18px 48px rgba(58,21,116,.14);
+  --shadow-glow:0 10px 40px rgba(148,101,253,.35);
+
+  /* Gradients */
+  --gradient-iris:linear-gradient(115deg,#9465fd 0%,#9593ff 16%,#bcf3c8 34%,#feed7a 52%,#ffb6ad 70%,#ffbdc5 84%,#c784ff 100%);
+  --gradient-violet:linear-gradient(135deg,#a585fd 0%,#7c3aed 100%);
+
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --dur-fast:140ms; --dur-base:240ms; --dur-slow:480ms;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--surface-page);
+  color:var(--text-body);
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(255,255,255,.9);z-index:60}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px;border-radius:6px}
+
+.wrap{max-width:var(--container);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wrap-wide{max-width:var(--container-wide)}
+.section{padding-block:var(--gutter-section)}
+
+.eyebrow{font-family:var(--font-sans);font-weight:600;font-size:.72rem;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted)}
+.eyebrow-grad{background:var(--gradient-violet);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad{background:var(--gradient-violet);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-iris{background:var(--gradient-iris);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.display{font-family:var(--font-display);font-weight:600;color:var(--text-strong);line-height:1.02;letter-spacing:-.015em}
+.section-head{display:flex;flex-direction:column;gap:14px;max-width:46ch}
+.section-head.center{align-items:center;text-align:center;margin-inline:auto}
+.h2{font-size:clamp(32px,5vw,50px)}
+.lede{font-size:clamp(16px,2vw,18px);color:var(--text-body);line-height:1.65;max-width:52ch}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-sans);font-weight:600;font-size:.9rem;border-radius:var(--radius-pill);padding:13px 26px;border:none;cursor:pointer;text-decoration:none;transition:transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-base) var(--ease-out),background var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--brand);color:var(--white);box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:var(--brand-hover);box-shadow:var(--shadow-md)}
+.btn-secondary{background:var(--surface-tint);color:var(--brand-active)}
+.btn-secondary:hover{background:var(--surface-tint-2)}
+.btn-gradient{background:var(--gradient-iris);color:var(--ink-900);box-shadow:var(--shadow-glow);font-weight:700}
+.btn-gradient:hover{box-shadow:0 14px 48px rgba(148,101,253,.45)}
+.btn-ghost-dark{background:rgba(255,255,255,.12);color:var(--white)}
+.btn-ghost-dark:hover{background:rgba(255,255,255,.22)}
+.btn-sm{padding:9px 18px;font-size:.82rem}
+
+/* Badges & tags */
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-sans);font-weight:600;font-size:.72rem;letter-spacing:.02em;padding:6px 12px;border-radius:var(--radius-pill);background:var(--surface-tint-2);color:var(--violet-700)}
+.badge.neutral{background:var(--ink-100);color:var(--ink-600)}
+.badge.success{background:#d9f3e3;color:#2f7a55}
+.tag{display:inline-flex;align-items:center;font-family:var(--font-sans);font-weight:600;font-size:.64rem;letter-spacing:var(--tracking-wide);text-transform:uppercase;padding:5px 11px;border-radius:var(--radius-pill);background:rgba(255,255,255,.85);color:var(--ink-700);backdrop-filter:blur(6px)}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border-subtle)}
+.nav-inner{max-width:var(--container-wide);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;background:none;border:none;cursor:pointer;padding:0}
+.brand img{width:34px;height:34px}
+.brand span{font-family:var(--font-sans);font-weight:700;font-size:1.02rem;color:var(--text-strong);line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--text-body);text-decoration:none;padding:8px 13px;border-radius:var(--radius-pill);transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+.nav-links a:hover{background:var(--violet-100);color:var(--violet-700)}
+.nav-cta{margin-left:8px}
+.menu-btn{display:none;background:none;border:1px solid var(--border-default);border-radius:var(--radius-pill);padding:9px 14px;cursor:pointer;font-family:var(--font-sans);font-weight:600;font-size:.8rem;color:var(--text-strong)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--surface-page)}
+.hero-bloom{position:absolute;inset:0;background:radial-gradient(72% 58% at 50% -12%,rgba(148,101,253,.13),rgba(149,147,255,.05) 42%,transparent 72%);pointer-events:none}
+.hero-inner{position:relative;max-width:var(--container);margin:0 auto;padding:clamp(56px,10vw,130px) max(20px,env(safe-area-inset-left,0px)) clamp(72px,11vw,150px);padding-right:max(20px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px}
+.hero-mark{width:84px;height:84px;filter:drop-shadow(0 14px 36px rgba(58,21,116,.28))}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(32px,5.6vw,62px);line-height:1.08;letter-spacing:-.018em;color:var(--text-strong);max-width:none;margin:0;text-wrap:balance}
+.hero p{font-size:clamp(16px,2vw,19px);line-height:1.6;color:var(--text-body);max-width:50ch;margin:0}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block}
+.hero-veil{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(64% 56% at 50% 50%,rgba(250,248,253,.72),rgba(250,248,253,.34) 66%,rgba(250,248,253,0) 100%)}
+.hero-inner{z-index:1}
+
+/* Cards */
+.card{position:relative;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:26px;transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out)}
+.card.accent{overflow:hidden}
+.card.accent::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--gradient-iris)}
+.card.lift:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+
+/* Work */
+.work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:48px}
+.case{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.case-tile{position:relative;aspect-ratio:8/5;overflow:hidden;background:var(--ink-100)}
+.case-tile .photo{width:100%;height:100%;object-fit:cover;display:block}
+.case-tile.gradtile{display:flex;align-items:flex-end;justify-content:flex-end;padding:18px}
+.case-tile.gradtile img{width:30px;height:30px;opacity:.9}
+.case-tile .tag{position:absolute;top:14px;left:14px;z-index:2}
+.case-body{display:flex;flex-direction:column;gap:12px;padding:24px;min-width:0}
+.case-body h3{font-family:var(--font-sans);font-weight:700;font-size:1.18rem;line-height:1.2;color:var(--text-strong);letter-spacing:-.01em}
+.case-role{font-size:.72rem;font-weight:600;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--violet-600)}
+.case-desc{font-size:.92rem;line-height:1.6;color:var(--text-body);margin:0}
+.case-impact{font-size:.9rem;line-height:1.5;color:var(--text-strong);font-weight:500;font-style:italic;font-family:var(--font-display);font-size:1.12rem}
+.case-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.chip{font-size:.68rem;font-weight:600;letter-spacing:.02em;color:var(--ink-600);background:var(--ink-100);border-radius:var(--radius-pill);padding:5px 10px}
+.case-link{align-self:flex-start;margin-top:4px;font-size:.8rem;font-weight:600;color:var(--violet-700);text-decoration:none;border-bottom:1px solid var(--violet-300);padding-bottom:1px}
+.case-link:hover{border-color:var(--violet-600)}
+
+/* Capabilities */
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:48px}
+.cap h3{font-family:var(--font-sans);font-weight:700;font-size:1.05rem;color:var(--text-strong);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.cap .num{font-family:var(--font-display);font-style:italic;font-size:1.7rem;color:var(--violet-400);line-height:1}
+.cap ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.cap li{font-size:.9rem;line-height:1.5;color:var(--text-body);padding-left:18px;position:relative}
+.cap li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:var(--radius-pill);background:var(--gradient-violet)}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr;gap:28px;max-width:760px}
+.about p{font-size:1.02rem;line-height:1.7;color:var(--text-body);margin:0}
+.about p .lead-in{color:var(--text-strong);font-weight:500}
+.about-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.about-grid{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
+.about-portrait img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:block}
+.about-desk{margin:44px 0 0}
+.about-desk img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:block;cursor:zoom-in}
+.about-desk figcaption{margin-top:12px;font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted)}
+@media(max-width:720px){.about-grid{grid-template-columns:1fr;gap:24px}.about-portrait{max-width:220px}}
+
+/* Footer / contact */
+.footer{position:relative;background:var(--ink-900);color:var(--white);overflow:hidden}
+.footer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--gradient-iris)}
+.footer-glow{position:absolute;inset:0;background:radial-gradient(circle at 20% 0%,rgba(148,101,253,.28) 0%,transparent 45%),radial-gradient(circle at 85% 20%,rgba(255,182,173,.14) 0%,transparent 40%);pointer-events:none}
+.footer-inner{position:relative;max-width:var(--container);margin:0 auto;padding:var(--gutter-section) max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.contact-top{display:flex;flex-direction:column;gap:18px;align-items:flex-start;max-width:40ch}
+.footer h2{font-family:var(--font-display);font-weight:600;font-size:clamp(34px,5.5vw,56px);line-height:1;color:var(--white)}
+.footer .lede-dark{color:rgba(255,255,255,.75);font-size:1.02rem;line-height:1.6}
+.email-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.email{font-family:var(--font-sans);font-weight:600;font-size:clamp(1rem,2.4vw,1.35rem);color:var(--white);user-select:all;word-break:break-all}
+.copy-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:var(--white);border-radius:var(--radius-pill);padding:7px 14px;font-family:var(--font-sans);font-weight:600;font-size:.76rem;cursor:pointer;transition:background var(--dur-fast) var(--ease-out)}
+.copy-btn:hover{background:rgba(255,255,255,.2)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.footer-bottom span{font-size:.78rem;color:rgba(255,255,255,.55);letter-spacing:.02em}
+.footer-wordmark{display:flex;align-items:center;gap:10px}
+.footer-wordmark img{width:28px;height:28px}
+.footer-wordmark b{font-family:var(--font-sans);font-weight:700;font-size:.92rem;color:var(--white);letter-spacing:-.01em}
+
+@media (max-width:760px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);padding:12px max(20px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--border-subtle)}
+  .nav-links.open a{padding:12px 14px}
+  .nav-links.open .nav-cta{margin:6px 0 0}
+  .menu-btn{display:inline-block}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+html{scroll-behavior:smooth}
+
+/* Case overlay (LSI, Parece Magia) */
+.co{position:fixed;inset:0;z-index:100;background:var(--surface-page);overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+body.co-open{overflow:hidden}
+.co-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border-subtle);padding:12px max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.co-bar .ttl{display:flex;align-items:center;gap:10px;font-family:var(--font-sans);font-weight:700;font-size:.9rem;letter-spacing:-.01em;color:var(--text-strong);min-width:0}
+.co-bar .ttl img{width:26px;height:26px;flex:none}
+.co-bar .ttl span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.co-close{flex:none;background:var(--surface-tint);border:none;color:var(--violet-700);border-radius:var(--radius-pill);padding:9px 18px;font-family:var(--font-sans);font-weight:600;font-size:.82rem;cursor:pointer}
+.co-close:hover{background:var(--surface-tint-2)}
+.co-hero{position:relative;overflow:hidden}
+.co-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 55% at 50% -14%,rgba(148,101,253,.12),transparent 70%);pointer-events:none}
+.co-hero .inner{position:relative;max-width:1080px;margin:0 auto;padding:clamp(40px,7vw,80px) max(20px,env(safe-area-inset-left,0px)) clamp(24px,4vw,44px);padding-right:max(20px,env(safe-area-inset-right,0px))}
+.co-hero h2{font-family:var(--font-display);font-weight:600;font-size:clamp(42px,8vw,86px);line-height:.97;letter-spacing:-.02em;color:var(--text-strong);margin:12px 0 0}
+.co-sub{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(18px,3vw,27px);color:var(--violet-700);margin:8px 0 0}
+.co-intro{font-size:clamp(15px,2vw,17px);line-height:1.65;color:var(--text-body);max-width:62ch;margin:20px 0 0}
+.co-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:34px 0 0}
+.co-stat{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:18px 20px;position:relative;overflow:hidden}
+.co-stat::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradient-iris)}
+.co-stat b{display:block;font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.05;color:var(--text-strong)}
+.co-stat span{display:block;margin-top:7px;font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.co-wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.co-sec{padding-block:clamp(40px,6vw,72px)}
+.co-wl{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px;margin-top:30px}
+.co-wl .it{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:22px;display:flex;flex-direction:column;gap:8px}
+.co-wl .it h3{font-family:var(--font-sans);font-weight:700;font-size:1rem;color:var(--text-strong);letter-spacing:-.01em}
+.co-wl .it .n{font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--violet-400);line-height:1}
+.co-wl .it p{font-size:.88rem;line-height:1.55;color:var(--text-body);margin:0}
+.co-feature{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);display:grid;grid-template-columns:1.25fr 1fr;margin-top:18px}
+.co-feature .media{min-width:0;background:var(--ink-100)}
+.co-feature .media img{width:100%;height:100%;object-fit:cover;object-position:left top}
+.co-feature .fbody{padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:13px;justify-content:center;min-width:0}
+.co-feature .fbody h3{font-family:var(--font-display);font-weight:600;font-size:clamp(24px,3vw,34px);line-height:1.05;color:var(--text-strong)}
+.co-feature .fbody p{font-size:.95rem;line-height:1.6;color:var(--text-body);margin:0}
+.co-urlpill{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--surface-tint);color:var(--violet-700);border-radius:var(--radius-pill);padding:10px 18px;font-weight:600;font-size:.84rem;text-decoration:none;word-break:break-all}
+.co-urlpill:hover{background:var(--surface-tint-2)}
+.co-gallery{columns:3 260px;column-gap:18px;margin-top:30px}
+.co-gallery figure{break-inside:avoid;margin:0 0 18px}
+.co-frame{position:relative;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-subtle);box-shadow:var(--shadow-sm);background:var(--white)}
+.co-frame img{width:100%;height:auto;display:block}
+.co-frame.reel::after{content:"\25B6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.88);color:var(--violet-700);border-radius:50%;font-size:19px;box-shadow:var(--shadow-md);padding-left:4px}
+.co-cap{margin-top:9px;font-size:.8rem;line-height:1.4;color:var(--text-muted)}
+.co-cap b{color:var(--text-strong);font-weight:600;font-size:.84rem}
+.co-back{text-align:center;margin-top:36px}
+@media (max-width:720px){.co-feature{grid-template-columns:1fr}.co-feature .media img{height:auto}}
+.co-gallery img,.co-feature .media img{cursor:zoom-in}
+.mf-head{display:inline-flex;align-items:center;gap:8px;margin:26px 0 2px;font-family:var(--font-sans);font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet-600)}
+.mf-head .dot{width:8px;height:8px;border-radius:50%;background:var(--violet-500);box-shadow:0 0 0 4px rgba(148,101,253,.18)}
+.mail-flow{display:flex;align-items:stretch;gap:0;margin-top:16px;flex-wrap:nowrap;justify-content:center}
+.mf-step{flex:1 1 0;min-width:0;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:22px 20px;display:flex;flex-direction:column;gap:9px;position:relative;text-align:left}
+.mf-ico{width:46px;height:46px;border-radius:50%;background:var(--violet-100);display:flex;align-items:center;justify-content:center;color:var(--violet-900)}
+.mf-ico svg{width:24px;height:24px}
+.mf-n{position:absolute;top:15px;right:17px;font-family:var(--font-sans);font-weight:700;font-size:12px;color:var(--violet-400);letter-spacing:.05em}
+.mf-step h4{font-family:var(--font-sans);font-weight:700;font-size:1rem;color:var(--text-strong);margin:4px 0 0;line-height:1.2}
+.mf-step p{font-size:.86rem;line-height:1.5;color:var(--text-body);margin:0}
+.mf-arrow{display:flex;align-items:center;justify-content:center;color:var(--violet-300);flex:0 0 46px}
+.mf-arrow svg{width:26px;height:26px}
+.mf-note{margin-top:14px;font-size:.84rem;line-height:1.5;color:var(--text-muted);text-align:center}
+@media (max-width:680px){.mail-flow{flex-direction:column;align-items:center}.mf-step{width:100%;max-width:440px}.mf-arrow{flex-basis:30px;height:30px;transform:rotate(90deg)}}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(15,12,22,.93);display:flex;align-items:flex-start;justify-content:center;padding:max(28px,env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) max(28px,env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));cursor:zoom-out;overflow:auto}
+.lb img{max-width:100%;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb-x{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1}
+.lb-x:hover{background:rgba(255,255,255,.3)}
+.co-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:16px;margin-top:30px}
+.co-step{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:22px;display:flex;flex-direction:column;gap:9px}
+.co-step .s{font-family:var(--font-display);font-style:italic;font-size:1.5rem;color:var(--violet-400);line-height:1}
+.co-step h3{font-family:var(--font-sans);font-weight:700;font-size:1rem;color:var(--text-strong);letter-spacing:-.01em}
+.co-step p{font-size:.86rem;line-height:1.55;color:var(--text-body);margin:0}
+.co-io{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px;align-items:start}
+.co-lab{font-family:var(--font-sans);font-weight:600;font-size:.7rem;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted);margin:0 0 10px}
+.co-input{margin:0;padding:16px;border-radius:var(--radius-md);background:var(--white);border:1px solid var(--border-subtle);box-shadow:var(--shadow-sm);font-family:'Space Mono',ui-monospace,Menlo,monospace;font-size:.74rem;line-height:1.7;color:var(--ink-700);white-space:pre;overflow-x:auto}
+.co-input .k{color:var(--violet-600)}
+.co-codewrap{margin-top:24px;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--ink-200);box-shadow:var(--shadow-md)}
+.co-codebar{display:flex;align-items:center;gap:7px;padding:11px 15px;background:#141219}
+.co-codebar i{width:11px;height:11px;border-radius:50%;background:#3d3a48;display:block}
+.co-codebar .fn{margin-left:8px;font-family:'Space Mono',ui-monospace,Menlo,monospace;font-size:.74rem;color:#9b97a6}
+.co-code{margin:0;padding:18px 20px;overflow-x:auto;background:#1d1b26;font-family:'Space Mono',ui-monospace,Menlo,monospace;font-size:.74rem;line-height:1.75;color:#e5e1ee;white-space:pre}
+.co-code .cm{color:#8f8aa3}
+.co-callout{margin-top:22px;background:var(--surface-tint);border:1px solid var(--violet-200);border-radius:var(--radius-md);padding:16px 18px;font-size:.92rem;line-height:1.6;color:var(--text-body)}
+.co-callout b{color:var(--text-strong)}
+@media (max-width:720px){.co-io{grid-template-columns:1fr}}
+.ds-gradbar{position:relative;height:140px;border-radius:var(--radius-lg);background:var(--gradient-iris);box-shadow:var(--shadow-md);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:18px}
+.ds-gradbar img{width:70px;height:70px;filter:drop-shadow(0 10px 24px rgba(58,21,116,.3))}
+.ds-logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:14px}
+.ds-logo{border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;padding:26px;border:1px solid var(--border-subtle)}
+.ds-logo img{width:50px;height:50px}
+.ds-logo.on-white{background:var(--white)}
+.ds-logo.on-grad{background:var(--gradient-iris);border-color:transparent}
+.ds-logo.on-dark{background:var(--ink-900);border-color:transparent}
+.ds-lab{font-family:var(--font-sans);font-weight:600;font-size:.7rem;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted);margin:26px 0 0}
+.ds-swrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:12px;margin-top:12px}
+.ds-sw{display:flex;flex-direction:column;gap:5px}
+.ds-chip{height:54px;border-radius:12px;border:1px solid rgba(29,27,38,.07)}
+.ds-sw b{font-family:'Space Mono',ui-monospace,monospace;font-size:.62rem;color:var(--text-strong);font-weight:700}
+.ds-sw span{font-family:'Space Mono',ui-monospace,monospace;font-size:.6rem;color:var(--text-muted)}
+.ds-type{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:12px}
+.ds-spec{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;overflow:hidden;min-width:0}
+.ds-spec .aa{line-height:1;margin:0}
+.ds-spec .meta{font-family:var(--font-sans);font-size:.68rem;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--text-muted);margin:14px 0 8px}
+.ds-spec .samp{margin:0;color:var(--text-body)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang{display:inline-flex;background:var(--ink-100);border-radius:var(--radius-pill);padding:3px;flex:none}
+.lang button{border:none;background:none;cursor:pointer;font-family:var(--font-sans);font-weight:700;font-size:.72rem;letter-spacing:.03em;color:var(--text-muted);padding:5px 10px;border-radius:var(--radius-pill);transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+.lang button[aria-pressed="true"]{background:var(--white);color:var(--violet-700);box-shadow:var(--shadow-xs)}
+/* Polish pass: sentence-case labels, one gradient moment (the hero), a featured lead project */
+.eyebrow,.case-role,.tag,.co-lab,.ds-lab,.ds-spec .meta,.mf-head{text-transform:none;letter-spacing:.01em}
+.eyebrow{font-size:.9rem;font-weight:600}
+.case-role{font-size:.8rem}
+.tag{font-size:.72rem}
+.card.accent::before,.co-stat::before{display:none}
+.card.lift:hover{transform:none;box-shadow:var(--shadow-md)}
+.cap .num,.co-wl .it .n{display:none}
+.hero h1{font-size:clamp(38px,6.6vw,80px);font-weight:500;line-height:1.02;letter-spacing:-.022em;max-width:19ch}
+@media (max-width:480px){.hero .hero-status{font-size:.92rem}.brand span{font-size:.9rem}.brand{gap:8px}.brand img{width:28px;height:28px}.lang button{padding:5px 8px}}
+.hero-status{margin:0;font-size:1rem;font-weight:500;color:var(--violet-700);max-width:40ch}
+.work-grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
+@media (min-width:900px){
+  .case.featured{grid-column:1/-1;flex-direction:row}
+  .case.featured .case-tile{flex:0 0 58%;aspect-ratio:auto;min-height:360px}
+  .case.featured .case-body{justify-content:center;padding:clamp(28px,3.4vw,44px)}
+  .case.featured h3{font-family:var(--font-display);font-weight:600;font-size:clamp(30px,3vw,40px);letter-spacing:-.015em}
+}
+.cg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:28px;margin-top:30px;align-items:start}
+.cg-form{display:flex;flex-direction:column;gap:12px}
+.cg-form label{font-weight:600;font-size:.88rem;color:var(--text-strong)}
+.cg-form input{font:inherit;font-size:1.05rem;padding:13px 16px;border-radius:var(--radius-md);border:1px solid var(--border-default);background:var(--white);color:var(--text-strong);width:100%;box-sizing:border-box}
+.cg-form input:focus{outline:2px solid var(--ring);outline-offset:1px;border-color:var(--violet-400)}
+.cg-read{font-family:'Space Mono',ui-monospace,monospace;font-size:.8rem;color:var(--violet-700);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);padding:10px 12px;margin:0}
+.cg-note{font-size:.86rem;line-height:1.55;color:var(--text-muted);margin:0}
+.cg canvas{width:100%;height:auto;display:block;border-radius:var(--radius-md);border:1px solid var(--border-subtle);box-shadow:var(--shadow-md);background:#fcf6e6}
+@media (max-width:760px){.cg{grid-template-columns:1fr}.cg-prev{order:-1}}
+/* Holographic project cards: tilt toward the pointer, iridescent sheen over the image */
+.case.holo{transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s var(--ease-out),box-shadow var(--dur-base) var(--ease-out);will-change:transform}
+.case.holo.is-live{transition:transform .08s linear,box-shadow var(--dur-base) var(--ease-out)}
+.case.holo .case-tile::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity .4s var(--ease-out);
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.55),rgba(255,255,255,.14) 30%,rgba(255,255,255,0) 58%),
+    linear-gradient(115deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.32) 50%,rgba(255,255,255,0) 60%);
+  background-size:100% 100%,250% 250%;background-position:center,var(--gx,50%) var(--gy,50%);mix-blend-mode:screen}
+.case.holo.is-live .case-tile::after{opacity:1}
+/* Hero secondary button: needs its own edge on the light, moving background */
+.hero-cta .btn-secondary{background:var(--white);color:var(--violet-700);box-shadow:inset 0 0 0 1.5px var(--violet-400),var(--shadow-sm)}
+.hero-cta .btn-secondary:hover{background:var(--violet-50);box-shadow:inset 0 0 0 1.5px var(--violet-600),var(--shadow-md)}
+/* Iridescent hairlines: the gradient shows up only as thin light, mostly on interaction */
+.case-link{border-bottom:none;padding-bottom:3px;background:linear-gradient(var(--violet-300),var(--violet-300)) left bottom/100% 1px no-repeat;transition:background-size var(--dur-base) var(--ease-out)}
+.case-link:hover,.case-link:focus-visible{background-image:var(--gradient-iris);background-size:100% 2px}
+.nav-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gradient-iris);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+::selection{background:#ffd3cc;color:var(--ink-900)}
+.cg-form input:focus{outline:none;border:2px solid transparent;padding:12px 15px;background:linear-gradient(var(--white),var(--white)) padding-box,var(--gradient-iris) border-box}
+/* Chips take turns through the iridescent spectrum, so a row reads like the gradient */
+.chip{color:var(--ink-800);background:var(--iris-lilac)}
+.case-stack .chip:nth-child(6n+1){background:#e4dcff}
+.case-stack .chip:nth-child(6n+2){background:#d4f5dc}
+.case-stack .chip:nth-child(6n+3){background:#fff3b0}
+.case-stack .chip:nth-child(6n+4){background:#ffd9d3}
+.case-stack .chip:nth-child(6n+5){background:#d6f6e9}
+.case-stack .chip:nth-child(6n+6){background:#f3dcec}
+/* Links out to the live projects: iridescent edge, full gradient on hover */
+.co-urlpill{border:1.5px solid transparent;background:linear-gradient(var(--white),var(--white)) padding-box,var(--gradient-iris) border-box;color:var(--violet-700);transition:background var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out)}
+.co-urlpill:hover,.co-urlpill:focus-visible{background:var(--gradient-iris) padding-box,var(--gradient-iris) border-box;color:var(--ink-900);box-shadow:var(--shadow-glow)}
+/* Case-study stat cards: a colored base strip from the spectrum (color set per card by script) */
+.co-stat{border-bottom:5px solid var(--stat,var(--violet-400))}
+/* What-I-made cards: a line icon on a pastel disc from the spectrum (color set by script) */
+.co-wl .it .ico{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ico,var(--violet-100));color:var(--violet-900);margin-bottom:6px}
+.co-wl .it .ico svg{width:24px;height:24px}
+.co-step{position:relative;border-bottom:5px solid var(--stat,var(--violet-400))}
+.co-step .ico{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ico,var(--violet-100));color:var(--violet-900)}
+.co-step .ico svg{width:24px;height:24px}
+.co-step .s{position:absolute;top:22px;right:22px}
+.lsi-gal{display:flex;flex-direction:column;gap:22px;margin-top:30px}
+.lg-row{display:flex;gap:18px;align-items:flex-start}
+.lg-cell{min-width:0}
+.lg-cell figure{margin:0}
+.lg-stack{display:flex;flex-direction:column;gap:18px}
+.lsi-gal img{cursor:zoom-in}
+@media (max-width:700px){.lg-row{flex-direction:column}.lg-cell{width:100%}}
+/* Case-study titles in one color; capabilities as open columns, not cards */
+.co-hero h2 .grad{background:none;color:inherit}
+.cap.card{background:none;border:none;box-shadow:none;border-radius:0;padding:20px 0 0;border-top:1px solid var(--border-brand)}
+.cap-grid{gap:40px}
+.cap-grid .cap.card{border-top:2px solid transparent;border-image:var(--gradient-iris) 1}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-progress" aria-hidden="true"></div>
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Agostina Villamayor, home">
+      <img src="logo-mark.png" alt="">
+      <span>Agostina Villamayor</span>
+    </a>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-gradient btn-sm nav-cta" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-status">Open to senior design roles in AI, automation and data</p>
+      <h1>I design the brand, then I build the tools that produce it.</h1>
+      <p>13+ years as a senior graphic designer, now pairing that eye with Python, data and AI workflows. I turn repetitive production into scripts, and brand work into systems that scale.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#work">See the work</a>
+        <a class="btn btn-secondary" href="cv-agostina-villamayor.pdf" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="wrap wrap-wide">
+      <div class="section-head center">
+        <h2 class="display h2">Where design meets engineering</h2>
+        <p class="lede">A few projects that show the full range: brand and production work, and the tools I build around it.</p>
+      </div>
+      <div class="work-grid">
+
+        <article class="card accent lift case featured">
+          <div class="case-tile">
+            <span class="tag">Client work · Pharma</span>
+            <img class="photo" src="lsi-diab.jpg" alt="DIABDERMIX training manual Agostina built with AI for LSI" style="object-position:center">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Senior designer · since 2022</p>
+            <h3>LSI Silderma</h3>
+            <p class="case-desc">Remote senior designer for an international dermocosmetics lab: monthly HTML newsletters for eight brands, launch banners, congress materials and an 88-slide training deck built with AI.</p>
+            <p class="case-impact">Four years of recurring, multi-brand production.</p>
+            <div class="case-stack"><span class="chip">HTML email</span><span class="chip">Adobe CC</span><span class="chip">pptxgenjs</span></div>
+            <a class="case-link" href="#lsi-detail" data-overlay="lsi-detail">View the full LSI case study</a>
+          </div>
+        </article>
+
+        <article class="card accent lift case">
+          <div class="case-tile">
+            <span class="tag">Design automation</span>
+            <img class="photo" src="work-cert.jpg" alt="Sample certificate generated by script from an Illustrator template, with a placeholder name" style="object-position:center">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Illustrator JSX + Python</p>
+            <h3>Production automation</h3>
+            <p class="case-desc">Scripts that remove the repetitive part of production, like an Illustrator generator that turns a list of names into finished diplomas, 8 or 80, in minutes.</p>
+            <p class="case-impact">One-by-one manual work turned into a single click.</p>
+            <div class="case-stack"><span class="chip">Illustrator JSX / UXP</span><span class="chip">Python</span><span class="chip">Automation</span></div>
+            <a class="case-link" href="#auto-detail" data-overlay="auto-detail">See the process</a>
+          </div>
+        </article>
+
+        <article class="card accent lift case">
+          <div class="case-tile">
+            <span class="tag">Full-stack tool</span>
+            <img class="photo" src="mock-panel.jpg" alt="Dashboard of Panel de la Agencia showing clients, tasks and payments in US dollars">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Self-built product · 2026</p>
+            <h3>Panel de la Agencia</h3>
+            <p class="case-desc">A private web app I built to run my freelance studio: clients, tasks, calendar and invoicing. A plain Python server, installable on my phone, with sync and daily backups.</p>
+            <p class="case-impact">Runs my whole operation, online or offline.</p>
+            <div class="case-stack"><span class="chip">Python</span><span class="chip">HTML / CSS / JS</span><span class="chip">PWA</span></div>
+          </div>
+        </article>
+
+        <article class="card accent lift case">
+          <div class="case-tile">
+            <span class="tag">E-commerce</span>
+            <img class="photo" src="work-helios.jpg" alt="Helios parapharmacie, a Shopify store in French selling the LSI line">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Shopify · live store</p>
+            <h3>Helios Parapharmacie</h3>
+            <p class="case-desc">A Shopify store I built in French that sells the full LSI Silderma line: catalog, product pages and storefront. Online and selling today.</p>
+            <p class="case-impact">A working online store, in a third language.</p>
+            <div class="case-stack"><span class="chip">Shopify</span><span class="chip">E-commerce</span><span class="chip">French</span></div>
+            <a class="case-link" href="https://helios-parapharmacie.fr/" target="_blank" rel="noopener">Visit the live store</a>
+          </div>
+        </article>
+
+        <article class="card accent lift case">
+          <div class="case-tile">
+            <span class="tag">Brand system</span>
+            <img class="photo" src="work-reiki-cover.jpg" alt="Parece Magia Reiki — the live link-in-bio site I designed and shipped, shown on mobile">
+          </div>
+          <div class="case-body">
+            <p class="case-role">End to end · brand + web</p>
+            <h3>Parece Magia Reiki</h3>
+            <p class="case-desc">A full brand for a Reiki practitioner, from the design system and social content to a live landing page, built accessibility-first for a deaf and hearing audience.</p>
+            <p class="case-impact">Identity, content and a live site, start to finish.</p>
+            <div class="case-stack"><span class="chip">Brand system</span><span class="chip">Web</span><span class="chip">Accessibility</span></div>
+            <a class="case-link" href="#reiki-detail" data-overlay="reiki-detail">View the full case study</a>
+          </div>
+        </article>
+
+        <article class="card accent lift case">
+          <div class="case-tile">
+            <span class="tag">Brand identity</span>
+            <img class="photo" src="work-monchi.jpg" alt="MONCHI SG Sunglasses brand identity — logotype in pink, coral and amber">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Identity &middot; logo system &middot; 2025</p>
+            <h3>MONCHI SG Sunglasses</h3>
+            <p class="case-desc">An identity for a sunglasses label: a logotype with the glasses built into the letters, a badge, a bright palette and ready-to-post story templates.</p>
+            <p class="case-impact">A complete identity, from logotype to social kit.</p>
+            <div class="case-stack"><span class="chip">Logo design</span><span class="chip">Brand identity</span><span class="chip">Illustrator</span></div>
+            <a class="case-link" href="#monchi-detail" data-overlay="monchi-detail">View the brand</a>
+          </div>
+        </article>
+
+        <article class="card accent lift case">
+          <div class="case-tile">
+            <span class="tag">Design system</span>
+            <img class="photo" src="work-ds.jpg" alt="Online Agostina Design System cover — holographic gradient, color tokens and type specimens">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Systems · tokens · docs</p>
+            <h3>Online Agostina Design System</h3>
+            <p class="case-desc">My own brand as a documented design system: tokens, type and components that a person or an AI agent can build from. This page is built with it.</p>
+            <p class="case-impact">A design system an agent can read and build from.</p>
+            <div class="case-stack"><span class="chip">Design tokens</span><span class="chip">Components</span><span class="chip">Documentation</span></div>
+            <a class="case-link" href="#ds-detail" data-overlay="ds-detail">Explore the system</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="capabilities" style="background:var(--surface-tint)">
+    <div class="wrap">
+      <div class="section-head center">
+        <h2 class="display h2">Design, with the technical range to back it</h2>
+        <p class="lede">Most designers stop at the file. I keep going into the code, the data and the automation around it.</p>
+      </div>
+      <div class="cap-grid">
+        <div class="card cap">
+          <h3><span class="num">01</span> Design</h3>
+          <ul>
+            <li>Brand identity and visual systems</li>
+            <li>Editorial, packaging and motion</li>
+            <li>Digital and print production</li>
+            <li>Retouching and compositing</li>
+          </ul>
+        </div>
+        <div class="card cap">
+          <h3><span class="num">02</span> Build</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript, Python, SQL, C#</li>
+            <li>Illustrator and Photoshop scripting (JSX / UXP)</li>
+            <li>PWAs and small web apps</li>
+            <li>Finishing a software development degree</li>
+          </ul>
+        </div>
+        <div class="card cap">
+          <h3><span class="num">03</span> Data &amp; AI</h3>
+          <ul>
+            <li>Power BI, Looker Studio, BigQuery</li>
+            <li>Data analysis and reporting</li>
+            <li>AI-integrated workflows built with Claude</li>
+            <li>Automation, from scripts to content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+      <div class="about-portrait"><img loading="lazy" src="about-portrait.jpg" alt="Portrait of Agostina Villamayor"></div>
+      <div class="about">
+        <div class="section-head">
+          <h2 class="display h2">Hi, I'm Agostina</h2>
+        </div>
+        <p><span class="lead-in">I'm a senior graphic designer with 13+ years of experience</span>, based in Argentina and working remotely with clients across LATAM, the US and Europe. For the last few years I've been folding software and AI into my design work: writing scripts, building small tools and analyzing data, so the work goes further than a single deliverable.</p>
+        <p>I like clear briefs and shipping things that actually work. Given the choice, I'd rather build the system once than repeat the task. I'm finishing a software development degree and looking for a role where design, automation and data meet.</p>
+        <div class="about-meta">
+          <span class="badge">Based in Argentina</span>
+          <span class="badge neutral">Remote-first</span>
+          <span class="badge neutral">English C1</span>
+          <span class="badge neutral">Software dev student</span>
+        </div>
+      </div>
+      </div>
+      <figure class="about-desk co-zoom">
+        <img loading="lazy" src="about-desk.jpg" alt="Agostina at her desk, with her design work on the left screen and the app she built on the right">
+      </figure>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="contact-top">
+        <h2>Let's work together</h2>
+        <p class="lede-dark">Open to senior design roles that touch AI, automation or data. Tell me what you're building and I'll get back within 48 hours.</p>
+        <div class="email-row">
+          <span class="email" id="email">online.agostina@gmail.com</span>
+          <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-gradient" href="mailto:online.agostina@gmail.com">Email me</a>
+          <a class="btn btn-ghost-dark" id="linkedinBtn" href="https://www.linkedin.com/in/agostinavillamayor/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost-dark" href="https://github.com/agosvillamayor" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost-dark" href="cv-agostina-villamayor.pdf" download>Download CV</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-wordmark">
+          <img loading="lazy" src="logo-mark-white.png" alt="">
+          <b>Agostina Villamayor</b>
+        </div>
+        <span>Senior Graphic Designer · AI + Data · Ciudad Evita, Argentina</span>
+      </div>
+    </div>
+  </footer>
+
+  <section id="lsi-detail" class="co" hidden aria-hidden="true">
+    <div class="co-bar">
+      <span class="ttl"><img loading="lazy" src="logo-mark.png" alt="">LSI Silderma — case study</span>
+      <button class="co-close" type="button" data-close-overlay>Close</button>
+    </div>
+    <div class="co-hero"><div class="inner">
+      <p class="eyebrow">Case study · Dermocosmetics · Since 2022</p>
+      <h2>LSI <span class="grad">Silderma</span></h2>
+      <p class="co-sub">Senior designer for an international pharma-cosmetics lab</p>
+      <p class="co-intro">LSI Silderma is a dermocosmetics laboratory with a multi-brand line sold across Europe, LATAM and Asia. I've been their remote senior designer since 2022, running the recurring work that keeps the brands consistent month after month: email newsletters, launch banners, congress materials, training decks, social content, and a live e-commerce store. Everything ships in English and Spanish, and some of it in French.</p>
+      <div class="co-stats">
+        <div class="co-stat"><b>2022</b><span>Senior designer, ongoing</span></div>
+        <div class="co-stat"><b>8+</b><span>Brands in one visual system</span></div>
+        <div class="co-stat"><b>Monthly</b><span>Newsletter cadence, to spec</span></div>
+        <div class="co-stat"><b>EN·ES·FR</b><span>Produced in three languages</span></div>
+      </div>
+    </div></div>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">What I do for them</p><h2 class="display h2">A full production system</h2></div>
+      <p class="lede" style="margin-top:14px">The brands share one visual language but each has its own color, audience and rules. I produce every piece to that system, keep it consistent across a dozen products, and turn work around on time. A lot repeats every month, so I build templates and scripts that make production faster without losing the detail.</p>
+      <div class="co-wl">
+        <div class="it"><span class="n">01</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span><h3>HTML email newsletters</h3><p>Monthly newsletters hand-built in HTML to a strict 600px spec, one per brand, with brand-colored headers and a star-rating survey footer. Client copy used word for word.</p></div>
+        <div class="it"><span class="n">02</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h3l6 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg></span><h3>E-banners &amp; launches</h3><p>Launch e-banners and teaser art for new product lines, each matched to its brand color and claims.</p></div>
+        <div class="it"><span class="n">03</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg></span><h3>Congress &amp; print</h3><p>Roll-up banners, invitations and key visuals for dermatology congresses, from Panama to JDP Paris.</p></div>
+        <div class="it"><span class="n">04</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H3z"/><path d="M21 5.5A1.5 1.5 0 0 0 19.5 4H14a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h7z"/></svg></span><h3>Training manuals &amp; decks</h3><p>Product training manuals for the medical team. I rebuilt an 88-page manual as an 88-slide deck, generated with AI so every section stayed consistent.</p></div>
+        <div class="it"><span class="n">05</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><h3>Social content</h3><p>Posts, stories and reel covers across the brands, adapted for each market and kept on-system.</p></div>
+        <div class="it"><span class="n">06</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2.2 10.5a1.5 1.5 0 0 0 1.5 1.2h8.3a1.5 1.5 0 0 0 1.5-1.2L21 8H6.3"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></span><h3>E-commerce</h3><p>I built and run a live Shopify store, in French, that sells the full LSI line, start to finish.</p></div>
+      </div>
+    </div></section>
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Featured</p><h2 class="display h2">A live Shopify store, in French</h2></div>
+      <div class="co-feature">
+        <div class="media"><img loading="lazy" src="lsi-helios.jpg" alt="Helios parapharmacie, a Shopify store in French selling the LSI line"></div>
+        <div class="fbody">
+          <h3>Helios Parapharmacie</h3>
+          <p>An e-commerce storefront I built on Shopify to sell the LSI line to a French market. Catalog, product pages and the full storefront, in French. Live and selling today.</p>
+          <div class="case-stack"><span class="chip">Shopify</span><span class="chip">E-commerce</span><span class="chip">French</span></div>
+          <a class="co-urlpill" href="https://helios-parapharmacie.fr/" target="_blank" rel="noopener">helios-parapharmacie.fr &#8599;</a>
+        </div>
+      </div>
+    </div></section>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Selected pieces</p><h2 class="display h2">Recent work, as it shipped</h2></div>
+      <div class="lsi-gal">
+        <div class="lg-row"><div class="lg-cell" style="flex:1.78"><figure><div class="co-frame"><img loading="lazy" src="lsi-diab.jpg" alt="DIABDERMIX training manual, printed booklet"></div><p class="co-cap"><b>DIABDERMIX training manual</b><br>88-slide deck rebuilt from an 88-page manual, with AI.</p></figure></div><div class="lg-cell" style="flex:.8"><figure><div class="co-frame"><img loading="lazy" src="mock-nl.jpg" alt="SILDERMIX GEL HTML email newsletter in English, shown on a phone"></div><p class="co-cap"><b>SILDERMIX GEL newsletter</b><br>Monthly HTML email, built to the 600px brand spec.</p></figure></div></div>
+        <div class="lg-row"><div class="lg-cell" style="flex:.39"><figure><div class="co-frame"><img loading="lazy" src="lsi-rollup.jpg" alt="TRANACIX roll-up banner for a congress"></div><p class="co-cap"><b>TRANACIX roll-up</b><br>Congress banner, melasma line.</p></figure></div><div class="lg-cell lg-stack" style="flex:1.8"><figure><div class="co-frame"><img loading="lazy" src="lsi-vitilsi.jpg" alt="VITILSI e-banner for World Vitiligo Day"></div><p class="co-cap"><b>VITILSI e-banner</b><br>World Vitiligo Day, 2026.</p></figure><figure><div class="co-frame"><img loading="lazy" src="lsi-biotopix.jpg" alt="BIOTOPIX LIFT e-banner"></div><p class="co-cap"><b>BIOTOPIX LIFT e-banner</b><br>Lifting line, 2026.</p></figure></div></div>
+      </div>
+      <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
+    </div></section>
+  </section>
+
+  <section id="reiki-detail" class="co" hidden aria-hidden="true">
+    <div class="co-bar">
+      <span class="ttl"><img loading="lazy" src="logo-mark.png" alt="">Parece Magia Reiki — case study</span>
+      <button class="co-close" type="button" data-close-overlay>Close</button>
+    </div>
+    <div class="co-hero"><div class="inner">
+      <p class="eyebrow">Case study · Brand &amp; content · End to end</p>
+      <h2>Parece <span class="grad">Magia</span> Reiki</h2>
+      <p class="co-sub">A full brand for a Reiki practitioner, built accessibility-first</p>
+      <p class="co-intro">Parece Magia is the brand of a Reiki practitioner who teaches and works in both spoken Spanish and Argentine Sign Language. I built the whole thing: the visual identity and design system, the social content, the downloadables, the automations and a live landing page, designed from the start for a deaf and hearing audience, with high contrast and one clear idea per piece.</p>
+      <div class="co-stats">
+        <div class="co-stat"><b>End to end</b><span>Brand, content, web and automation</span></div>
+        <div class="co-stat"><b>Live</b><span>Landing shipped on Netlify</span></div>
+        <div class="co-stat"><b>ES · LSA</b><span>Accessible in two languages</span></div>
+        <div class="co-stat"><b>Automated</b><span>Certificates and emails</span></div>
+      </div>
+    </div></div>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">What I made</p><h2 class="display h2">Everything the brand needs to run</h2></div>
+      <div class="co-wl">
+        <div class="it"><span class="n">01</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><h3>Brand &amp; design system</h3><p>Logo, palette, typography and a documented design system the whole brand is built from.</p></div>
+        <div class="it"><span class="n">02</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m10 8.5 5.5 3.5-5.5 3.5z"/></svg></span><h3>Social &amp; reel covers</h3><p>Carousels, story templates and reel covers, accessibility-first, one idea per piece.</p></div>
+        <div class="it"><span class="n">03</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M12 11v6"/><path d="m9.5 14.5 2.5 2.5 2.5-2.5"/></svg></span><h3>Downloadable PDFs &amp; guides</h3><p>Self-treatment guides and course materials laid out as polished, downloadable PDFs.</p></div>
+        <div class="it"><span class="n">04</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4"/><path d="M8 20h8"/><path d="m8 12 3-3 2 2 3-3"/></svg></span><h3>Presentations</h3><p>The Nivel 1 workshop presentation, in Spanish and sign language, ready to teach from.</p></div>
+        <div class="it"><span class="n">05</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/><path d="m15.5 15.5 2 2 3.5-3.5"/></svg></span><h3>Automatic HTML emails</h3><p>Workshop emails built in HTML and set up to go out automatically to each student.</p></div>
+        <div class="it"><span class="n">06</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.2"/><path d="M9 13.2 7.4 20.5 12 17.8l4.6 2.7L15 13.2"/></svg></span><h3>Certificate automation</h3><p>A script that generates one personalized diploma per student from a template, in minutes.</p></div>
+        <div class="it"><span class="n">07</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="13" height="11" rx="2.5"/><path d="m15.5 10.5 6-3.5v10l-6-3.5z"/></svg></span><h3>Video reels</h3><p>Edited promo reels for the workshops, subtitled and on-brand.</p></div>
+        <div class="it"><span class="n">08</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span><h3>Live landing page</h3><p>A link-in-bio site shipped on Netlify, with workshops, booking and the catalog.</p></div>
+      </div>
+    </div></section>
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Featured</p><h2 class="display h2">A live link-in-bio site</h2></div>
+      <div class="co-feature">
+        <div class="media"><img loading="lazy" src="mock-pm.jpg" style="object-position:center" alt="Parece Magia link-in-bio landing page, live on Netlify"></div>
+        <div class="fbody">
+          <h3>parecemagia.reiki</h3>
+          <p>A link-in-bio landing I designed and shipped on Netlify: workshops with open enrollment, WhatsApp booking, services and the catalog, all in the brand's sea-and-whale world.</p>
+          <div class="case-stack"><span class="chip">Web</span><span class="chip">Netlify</span><span class="chip">Accessibility</span></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="co-urlpill" href="https://parecemagia.netlify.app/" target="_blank" rel="noopener">parecemagia.netlify.app &#8599;</a>
+            <a class="co-urlpill" href="https://www.instagram.com/parecemagia.reiki/" target="_blank" rel="noopener">@parecemagia.reiki &#8599;</a>
+          </div>
+        </div>
+      </div>
+    </div></section>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Automation</p><h2 class="display h2">Workshop emails, start to finish</h2></div>
+      <figure class="co-zoom" style="margin:0"><div class="co-frame"><img loading="lazy" src="pm-mails.jpg" alt="Three HTML emails for the Reiki workshop: enrollment confirmation, Zoom-link reminder and a closing email with materials and certificate"></div></figure>
+      <div class="mf-head"><span class="dot" aria-hidden="true"></span>Automated — it sends itself</div>
+      <div class="mail-flow">
+        <div class="mf-step">
+          <div class="mf-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/><path d="m15.5 15.5 2 2 3.5-3.5"/></svg></div>
+          <span class="mf-n">01</span>
+          <h4>Enrollment confirmation</h4>
+          <p>When someone signs up, they get the session details.</p>
+        </div>
+        <div class="mf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></div>
+        <div class="mf-step">
+          <div class="mf-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="13" height="11" rx="2.5"/><path d="m15.5 10.5 6-3.5v10l-6-3.5z"/></svg></div>
+          <span class="mf-n">02</span>
+          <h4>Reminder + Zoom link</h4>
+          <p>A day before, the link to join the session.</p>
+        </div>
+        <div class="mf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></div>
+        <div class="mf-step">
+          <div class="mf-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.2"/><path d="M9 13.2 7.4 20.5 12 17.8l4.6 2.7L15 13.2"/></svg></div>
+          <span class="mf-n">03</span>
+          <h4>Closing + certificate</h4>
+          <p>After the workshop: the materials and the certificate of participation.</p>
+        </div>
+      </div>
+      <p class="mf-note">Designed and set up to run on its own — all in the brand's sea-and-whale world.</p>
+    </div></section>
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Selected pieces</p><h2 class="display h2">A look at the work</h2></div>
+      <div class="lsi-gal">
+        <div class="lg-row"><div class="lg-cell" style="flex:.8"><figure><div class="co-frame"><img loading="lazy" src="work-reiki.jpg" alt="What is Reiki carousel cover"></div><p class="co-cap"><b>Social carousel</b><br>"¿Qué es el Reiki?" opener.</p></figure></div><div class="lg-cell" style="flex:1.78"><figure><div class="co-frame"><img loading="lazy" src="pm-ppt.jpg" alt="Reiki Nivel 1 presentation cover"></div><p class="co-cap"><b>Workshop presentation</b><br>Nivel 1, Spanish and sign language.</p></figure></div><div class="lg-cell" style="flex:.56"><figure><div class="co-frame"><video controls playsinline preload="none" poster="pm-reel.jpg" src="pm-reel.mp4" style="width:100%;height:auto;display:block;background:#000"></video></div><p class="co-cap"><b>Video reel</b><br>"Hago Reiki en dos idiomas." · 25s, subtitled.</p></figure></div></div>
+        <div class="lg-row"><div class="lg-cell" style="flex:1.41"><figure><div class="co-frame"><img loading="lazy" src="work-cert.jpg" alt="Sample Reiki certificate with a placeholder name"></div><p class="co-cap"><b>Certificate automation</b><br>One personalized diploma per student (sample name).</p></figure></div><div class="lg-cell" style="flex:1.6"><figure><div class="co-frame"><img loading="lazy" src="pm-voucher.jpg" alt="Reiki gift voucher"></div><p class="co-cap"><b>Gift voucher</b><br>"Un regalo para reconectar."</p></figure></div></div>
+      </div>
+      <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
+    </div></section>
+  </section>
+
+  <section id="auto-detail" class="co" hidden aria-hidden="true">
+    <div class="co-bar">
+      <span class="ttl"><img loading="lazy" src="logo-mark.png" alt="">Production automation — case study</span>
+      <button class="co-close" type="button" data-close-overlay>Close</button>
+    </div>
+    <div class="co-hero"><div class="inner">
+      <p class="eyebrow">Case study · Design + code</p>
+      <h2>Production <span class="grad">automation</span></h2>
+      <p class="co-sub">Scripts that take the repetitive work out of design production</p>
+      <p class="co-intro">Some design work is really data work in disguise: the same template, filled in over and over. I write scripts that do that part, so a job that used to mean editing one file per person becomes a single run. The clearest example is the diploma generator I built for a Reiki workshop, which turns a plain list of names into a folder of finished, personalized certificates.</p>
+      <div class="co-stats">
+        <div class="co-stat"><b>1 click</b><span>From a name list to finished PDFs</span></div>
+        <div class="co-stat"><b>8 to 80</b><span>Students per run, same effort</span></div>
+        <div class="co-stat"><b>Minutes</b><span>Instead of one file at a time</span></div>
+        <div class="co-stat"><b>~$0</b><span>Runs locally, near-zero cost</span></div>
+      </div>
+    </div></div>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">How it works</p><h2 class="display h2">From a text file to finished diplomas</h2></div>
+      <div class="co-steps">
+        <div class="co-step"><span class="s">01</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 12h6"/><path d="M10 15.5h6"/><path d="M10 19h3"/></svg></span><h3>Data</h3><p>A plain text file with the course title, date, modality and the list of student names.</p></div>
+        <div class="co-step"><span class="s">02</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10"/><path d="M9 13h6"/><path d="M8 17h8" stroke-dasharray="1.5 2"/></svg></span><h3>Template</h3><p>My Illustrator diploma, with the changing fields named as layers: name, title, date, modality.</p></div>
+        <div class="co-step"><span class="s">03</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg></span><h3>Script</h3><p>The JSX reads the file, fills each field, and shrinks a long name so it always fits the line.</p></div>
+        <div class="co-step"><span class="s">04</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h9l3 3v12H8z"/><path d="M5 3h9"/><path d="M5 3v15"/><path d="M11 14h6"/><path d="M11 17.5h4"/></svg></span><h3>Output</h3><p>One finished, personalized PDF per student, named and saved in a dated folder.</p></div>
+      </div>
+    </div></section>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Live demo</p><h2 class="display h2">Try it with your name</h2></div>
+      <div class="cg">
+        <div class="cg-form">
+          <label for="cgName">Student name</label>
+          <input id="cgName" type="text" maxlength="60" value="Luna Herrera" autocomplete="off" spellcheck="false">
+          <p class="cg-read" id="cgRead" aria-live="polite"></p>
+          <p class="cg-note">Same rule as the real script: the name starts at 72px and shrinks, down to 60%, until it fits the line.</p>
+          <button class="btn btn-secondary" type="button" id="cgSave" hidden>Download PNG</button>
+        </div>
+        <div class="cg-prev"><canvas id="cgCanvas" width="1200" height="849" role="img" aria-label="Certificate preview with the name you typed"></canvas></div>
+      </div>
+    </div></section>
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">The engine</p><h2 class="display h2">Real code, not a plugin</h2></div>
+      <div class="co-io">
+        <div>
+          <p class="co-lab">Input · datos_certificados.txt</p>
+          <pre class="co-input"><span class="k">titulo</span>=NIVEL 1 de REIKI USUI: autotratamiento a
+<span class="k">fecha</span>=03/10/2026
+<span class="k">modalidad</span>=manera virtual en Español
+<span class="k">alumnos:</span>
+Luna Herrera
+Mora Giménez</pre>
+        </div>
+        <div class="co-zoom">
+          <p class="co-lab">Output · one PDF per name</p>
+          <figure style="margin:0"><div class="co-frame"><img loading="lazy" src="work-cert.jpg" alt="Generated Reiki certificate with a placeholder name"></div></figure>
+        </div>
+      </div>
+      <div class="co-codewrap">
+        <div class="co-codebar"><i></i><i></i><i></i><span class="fn">generar_certificados.jsx</span></div>
+        <pre class="co-code"><span class="cm">// Reads datos_certificados.txt and exports one PDF per student</span>
+#target illustrator
+
+<span class="cm">// 1 · Read the course data (title, date, modality, names)</span>
+var lineas = fDatos.read().split(/\r\n|\r|\n/);
+var datos = {}, alumnos = [], enAlumnos = false;
+for (var i = 0; i &lt; lineas.length; i++) {
+    var l = trim(lineas[i]);
+    if (/^alumnos\s*:?\s*$/i.test(l)) { enAlumnos = true; continue; }
+    if (enAlumnos) { alumnos.push(l); continue; }
+    var p = l.indexOf("=");
+    if (p &gt; 0) datos[trim(l.substring(0,p)).toLowerCase()] = trim(l.substring(p+1));
+}
+
+<span class="cm">// 2 · Fill the named layers in the Illustrator template</span>
+tTitulo.contents    = datos.titulo;
+tFecha.contents     = tFecha.contents.replace(/\d{1,2}\/\d{1,2}\/\d{4}/, fechaTxt);
+tModalidad.contents = datos.modalidad;
+
+<span class="cm">// 3 · One PDF per student — the name shrinks to fit</span>
+for (var a = 0; a &lt; alumnos.length; a++) {
+    tNombre.contents = alumnos[a];
+    var tam = tamOriginal;
+    while (tNombre.width &gt; anchoMax &amp;&amp; tam &gt; tamOriginal * 0.6) {
+        tam -= 1; tNombre.textRange.characterAttributes.size = tam;
+    }
+    doc.saveAs(File(salida + "/Certificado_" + slug(alumnos[a]) + ".pdf"), pdfOpt);
+}</pre>
+      </div>
+      <div class="co-callout">I tested Adobe's cloud data-merge and dropped it. <b>The local script is faster, needs no uploads, and costs almost nothing to run</b>, so making a new batch is just writing a small text file, whether it is 8 students or 80.</div>
+    </div></section>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Why it matters</p><h2 class="display h2">The same idea, across production</h2></div>
+      <p class="lede" style="margin-top:14px">This is the thread through a lot of my work: find the repetitive part, and build the tool that removes it. The same approach powers my print-production scripts, which nest and pack images for Illustrator layouts, written in JSX and Python. It is design work that pays for itself in hours saved.</p>
+      <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
+    </div></section>
+  </section>
+
+  <section id="ds-detail" class="co" hidden aria-hidden="true">
+    <div class="co-bar">
+      <span class="ttl"><img loading="lazy" src="logo-mark.png" alt="">Online Agostina Design System — case study</span>
+      <button class="co-close" type="button" data-close-overlay>Close</button>
+    </div>
+    <div class="co-hero"><div class="inner">
+      <p class="eyebrow">Case study · Brand &amp; system</p>
+      <h2>Online Agostina <span class="grad">Design System</span></h2>
+      <p class="co-sub">My brand, turned into a system others can build from</p>
+      <p class="co-intro">I turned my own brand into a documented design system: color tokens, typography, spacing, components and guidelines, with the logos and the signature holographic gradient. It is structured so a person or an AI agent can read it and build on it, and this very portfolio is built from it.</p>
+      <div class="co-stats">
+        <div class="co-stat"><b>40+</b><span>Color and type tokens</span></div>
+        <div class="co-stat"><b>10</b><span>Reusable components</span></div>
+        <div class="co-stat"><b>Agent-ready</b><span>Readable by people and AI</span></div>
+        <div class="co-stat"><b>This page</b><span>Built from the system</span></div>
+      </div>
+    </div></div>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">What's inside</p><h2 class="display h2">One brand, fully systemized</h2></div>
+      <div class="co-wl">
+        <div class="it"><span class="n">01</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><circle cx="12" cy="15" r="4"/></svg></span><h3>Color tokens</h3><p>A violet primary, an iridescent pastel spectrum, and violet-tinted neutrals, as named tokens.</p></div>
+        <div class="it"><span class="n">02</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6V4h14v2"/><path d="M12 4v16"/><path d="M9 20h6"/></svg></span><h3>Typography</h3><p>A high-contrast serif for display and a geometric sans for everything else, with a full type scale.</p></div>
+        <div class="it"><span class="n">03</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8" width="19" height="8" rx="1.5"/><path d="M7 8v3"/><path d="M11 8v4"/><path d="M15 8v3"/><path d="M19 8v4"/></svg></span><h3>Spacing &amp; radius</h3><p>An 8px spacing rhythm and soft, consistent corner radii across the whole system.</p></div>
+        <div class="it"><span class="n">04</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span><h3>Components</h3><p>Buttons, cards, badges, tags, inputs and brand pieces, each with its own guidelines.</p></div>
+        <div class="it"><span class="n">05</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2z"/><path d="m8.5 9 1.5 1.5 3-3"/><path d="M15 9h1"/><path d="m8.5 15 1.5 1.5 3-3"/><path d="M15 15h1"/></svg></span><h3>Guidelines</h3><p>Usage notes for every token and component, so the system is used the same way every time.</p></div>
+        <div class="it"><span class="n">06</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l3 5-9 11L3 9z"/><path d="M3 9h18"/><path d="m9 4-1 5 4 11 4-11-1-5"/></svg></span><h3>Assets</h3><p>The gem logo in its variants and the signature holographic gradient, ready to drop in.</p></div>
+      </div>
+    </div></section>
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">The system, in pieces</p><h2 class="display h2">The signature gradient and the mark</h2></div>
+      <div class="ds-gradbar"><img loading="lazy" src="logo-mark-white.png" alt="Online Agostina gem logo on the holographic gradient"></div>
+      <div class="ds-logos">
+        <div><div class="ds-logo on-white"><img loading="lazy" src="logo-mark.png" alt=""></div><p class="ds-lab" style="text-align:center;margin-top:10px">On white</p></div>
+        <div><div class="ds-logo on-grad"><img loading="lazy" src="logo-mark-white.png" alt=""></div><p class="ds-lab" style="text-align:center;margin-top:10px">On gradient</p></div>
+        <div><div class="ds-logo on-dark"><img loading="lazy" src="logo-mark-white.png" alt=""></div><p class="ds-lab" style="text-align:center;margin-top:10px">On dark</p></div>
+      </div>
+      <p class="ds-lab">Brand violet</p>
+      <div class="ds-swrow">
+        <div class="ds-sw"><div class="ds-chip" style="background:#ede8ff"></div><b>violet-100</b><span>#ede8ff</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#c3b2ff"></div><b>violet-300</b><span>#c3b2ff</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#a585fd"></div><b>violet-400</b><span>#a585fd</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#9465fd"></div><b>violet-500</b><span>#9465fd</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#7c3aed"></div><b>violet-600</b><span>#7c3aed</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#3a1574"></div><b>violet-900</b><span>#3a1574</span></div>
+      </div>
+      <p class="ds-lab">Iridescent spectrum</p>
+      <div class="ds-swrow">
+        <div class="ds-sw"><div class="ds-chip" style="background:#9465fd"></div><b>iris-violet</b><span>#9465fd</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#9593ff"></div><b>periwinkle</b><span>#9593ff</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#bcf3c8"></div><b>mint</b><span>#bcf3c8</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#c2f4df"></div><b>aqua</b><span>#c2f4df</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#feed7a"></div><b>yellow</b><span>#feed7a</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#fed547"></div><b>gold</b><span>#fed547</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#ffb6ad"></div><b>coral</b><span>#ffb6ad</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#ffbdc5"></div><b>pink</b><span>#ffbdc5</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#ebc8e1"></div><b>lilac</b><span>#ebc8e1</span></div>
+      </div>
+      <p class="ds-lab">Neutrals</p>
+      <div class="ds-swrow">
+        <div class="ds-sw"><div class="ds-chip" style="background:#1d1b26"></div><b>ink-900</b><span>#1d1b26</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#3d3a48"></div><b>ink-700</b><span>#3d3a48</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#757181"></div><b>ink-500</b><span>#757181</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#c6c2d2"></div><b>ink-300</b><span>#c6c2d2</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#f2eff8"></div><b>ink-100</b><span>#f2eff8</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#faf8fd"></div><b>ink-50</b><span>#faf8fd</span></div>
+      </div>
+      <p class="ds-lab">Typography</p>
+      <div class="ds-type">
+        <div class="ds-spec"><p class="aa" style="font-family:var(--font-display);font-size:66px;color:var(--text-strong)">Aa</p><p class="meta">Cormorant Garamond · Display</p><p class="samp" style="font-family:var(--font-display);font-size:26px">Design that shines</p></div>
+        <div class="ds-spec"><p class="aa" style="font-family:var(--font-sans);font-weight:700;font-size:58px;color:var(--text-strong)">Aa</p><p class="meta">Montserrat · Sans / UI</p><p class="samp" style="font-family:var(--font-sans);font-size:16px">Clear systems, built to scale.</p></div>
+      </div>
+    </div></section>
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Under the hood</p><h2 class="display h2">Documented so agents can build on it</h2></div>
+      <p class="lede" style="margin-top:14px">Every color, font and component lives in one documented source, so the look stays consistent and anyone, human or AI, can build new pieces that fit.</p>
+      <div class="co-codewrap">
+        <div class="co-codebar"><i></i><i></i><i></i><span class="fn">tokens/colors.css</span></div>
+        <pre class="co-code"><span class="cm">/* Violet — primary brand ramp */</span>
+--violet-500: #9465fd;   <span class="cm">/* core brand violet */</span>
+--violet-600: #7c3aed;
+
+<span class="cm">/* Iridescent spectrum (the holographic stops) */</span>
+--iris-mint:   #bcf3c8;
+--iris-yellow: #feed7a;
+--iris-coral:  #ffb6ad;
+
+<span class="cm">/* Neutrals — faintly violet-tinted */</span>
+--ink-900: #1d1b26;
+--ink-50:  #faf8fd;
+
+<span class="cm">/* Semantic aliases components reference */</span>
+--surface-page: var(--ink-50);
+--text-strong:  var(--ink-900);
+--brand:        var(--violet-500);</pre>
+      </div>
+      <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
+    </div></section>
+  </section>
+
+  <section id="monchi-detail" class="co" hidden aria-hidden="true">
+    <div class="co-bar">
+      <span class="ttl"><img loading="lazy" src="logo-mark.png" alt="">MONCHI SG Sunglasses — brand identity</span>
+      <button class="co-close" type="button" data-close-overlay>Close</button>
+    </div>
+    <div class="co-hero"><div class="inner">
+      <p class="eyebrow">Case study · Brand identity</p>
+      <h2>MONCHI SG <span class="grad">Sunglasses</span></h2>
+      <p class="co-sub">A playful identity for a sunglasses label</p>
+      <p class="co-intro">A brand identity I designed for MONCHI SG, a sunglasses label. The brief asked for something fun and feminine that still read as a real product brand, so I built the identity around a playful display typeface, with the sunglasses worked right into the letters, then extended it into a full kit: lockups, a bright palette, brand fonts, and a set of social story templates the brand can post with on its own.</p>
+      <div class="co-stats">
+        <div class="co-stat"><b>Logotype</b><span>Display type + custom details</span></div>
+        <div class="co-stat"><b>3 lockups</b><span>Horizontal, badge and monochrome</span></div>
+        <div class="co-stat"><b>11 templates</b><span>Ready-to-post story backgrounds</span></div>
+        <div class="co-stat"><b>Print + digital</b><span>CMYK and RGB, delivered ready</span></div>
+      </div>
+    </div></div>
+
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">What I made</p><h2 class="display h2">One label, a whole identity</h2></div>
+      <div class="co-wl">
+        <div class="it"><span class="n">01</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 9l3 11h8l3-11z"/><circle cx="12" cy="11" r="1.6"/><path d="M12 3v6.4"/></svg></span><h3>Logotype</h3><p>A playful logotype — a display typeface with the sunglasses worked into the letters and little shine marks on each side.</p></div>
+        <div class="it"><span class="n">02</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 3v2"/><path d="M12 19v2"/><path d="M3 12h2"/><path d="M19 12h2"/></svg></span><h3>Logo system</h3><p>A horizontal lockup, a circular badge and monochrome versions, so the brand works at any size and on any background.</p></div>
+        <div class="it"><span class="n">03</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.9 1.5-2-.4-1.4.6-2.5 2-2.5H18a3 3 0 0 0 3-3A9 9 0 0 0 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10.5" cy="7" r="1.2"/><circle cx="15.5" cy="7.5" r="1.2"/></svg></span><h3>Color palette</h3><p>A bright, sunny palette — magenta, coral, amber and blush — that feels playful but stays coherent.</p></div>
+        <div class="it"><span class="n">04</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 19 5-14h1l5 14"/><path d="M6 14h7"/><path d="M17 11a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/><path d="M19.5 11v8"/></svg></span><h3>Brand fonts</h3><p>Two brand fonts: a display face for the logotype and a friendly rounded sans for everything else.</p></div>
+        <div class="it"><span class="n">05</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M9.5 7h5"/><path d="M9.5 10.5h5"/></svg></span><h3>Story templates</h3><p>Eleven ready-to-post story backgrounds in the brand's colors and shapes, for day-to-day social.</p></div>
+        <div class="it"><span class="n">06</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8.5 4.5v9L12 21l-8.5-4.5v-9z"/><path d="m3.5 7.5 8.5 4.5 8.5-4.5"/><path d="M12 12v9"/></svg></span><h3>Delivery</h3><p>Final files in CMYK for print and RGB for social, plus the editable source, handed over ready to use.</p></div>
+      </div>
+    </div></section>
+
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">The mark</p><h2 class="display h2">The logotype and the badge</h2></div>
+      <div class="co-feature">
+        <div class="media" style="background:#fff"><img loading="lazy" src="mon-lockup.jpg" alt="MONCHI SG horizontal logotype and circular badge"></div>
+        <div class="fbody">
+          <h3>Built into the letters</h3>
+          <p>The sunglasses sit inside the O and the little strokes on each side read as a flash of sun. The horizontal lockup is the primary logo; the circular badge is for profile pictures, stickers and stamps.</p>
+          <div class="case-stack"><span class="chip">Logotype</span><span class="chip">Badge</span><span class="chip">Display type</span></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">The system</p><h2 class="display h2">Color and lockups</h2></div>
+      <figure class="co-zoom" style="margin:0 0 8px"><div class="co-frame" style="background:#faf6f8"><img loading="lazy" src="mon-badges.jpg" alt="MONCHI SG badge in pink, coral and monochrome"></div></figure>
+      <p class="ds-lab">Brand palette</p>
+      <div class="ds-swrow">
+        <div class="ds-sw"><div class="ds-chip" style="background:#E5538F"></div><b>magenta</b><span>#E5538F</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#E6603C"></div><b>coral</b><span>#E6603C</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#F2A052"></div><b>amber</b><span>#F2A052</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#E7A9C2"></div><b>blush</b><span>#E7A9C2</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#1A1A1A"></div><b>ink</b><span>#1A1A1A</span></div>
+      </div>
+      <p class="ds-lab">Brand typeface</p>
+      <div class="ds-type">
+        <div class="ds-spec"><p class="aa" style="font-family:'Nunito',var(--font-sans);font-weight:800;font-size:60px;color:var(--text-strong)">Aa</p><p class="meta">Nunito · rounded sans</p><p class="samp" style="font-family:'Nunito',var(--font-sans);font-size:16px">Sunny, friendly, easy to read.</p></div>
+        <div class="ds-spec"><p class="aa" style="font-family:'Nunito',var(--font-sans);font-weight:800;font-size:30px;color:var(--text-strong)">PREUS HYDE</p><p class="meta">Display face · the logotype</p><p class="samp" style="font-family:'Nunito',var(--font-sans);font-size:16px">A display typeface used for the MONCHI wordmark; the sunglasses and shine marks are the custom part.</p></div>
+      </div>
+    </div></section>
+
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Social</p><h2 class="display h2">A story system the brand can run itself</h2></div>
+      <figure class="co-zoom" style="margin:0"><div class="co-frame" style="background:#f4eff6"><img loading="lazy" src="mon-stories.jpg" alt="MONCHI SG social story templates in the brand colors"></div></figure>
+      <p class="co-cap" style="margin-top:12px">Eleven story backgrounds in the brand's colors and shapes, so MONCHI can post consistently without a designer every time.</p>
+    </div></section>
+
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Out in the world</p><h2 class="display h2">The brand, on real products</h2></div>
+      <div class="co-gallery" style="columns:2 300px">
+        <figure><div class="co-frame"><img loading="lazy" src="mon-pack.jpg" alt="MONCHI SG branded packaging — kraft mailer boxes, tissue paper and badge sticker"></div><p class="co-cap"><b>Packaging &amp; unboxing</b><br>Printed mailer boxes, tissue and sticker — "muchas gracias, ya tenés tus lentes favoritos."</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="mon-stall.jpg" alt="MONCHI SG branded lens pouch at a market stall"></div><p class="co-cap"><b>At the market</b><br>Branded lens pouch on the stall, out in the sun.</p></figure>
+      </div>
+      <p class="co-cap" style="margin-top:16px">The same logotype holds up off-screen — on cardboard, tissue and fabric. The brand is live and selling: on Instagram, and in the client's own online shop, which she set up herself from the kit I delivered.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <a class="co-urlpill" href="https://www.instagram.com/monchi.sunglasses/" target="_blank" rel="noopener">@monchi.sunglasses &#8599;</a>
+        <a class="co-urlpill" href="https://monchisg.mitiendanube.com/" target="_blank" rel="noopener">monchisg.mitiendanube.com &#8599;</a>
+      </div>
+      <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
+    </div></section>
+  </section>
+
+  <div id="lightbox" class="lb" hidden aria-hidden="true">
+    <button class="lb-x" type="button" aria-label="Close">&times;</button>
+    <img loading="lazy" alt="">
+  </div>
+</main>
+
+<script>
+(function(){
+  var mb=document.getElementById('menuBtn'),nl=document.getElementById('navLinks');
+  if(mb&&nl){
+    mb.addEventListener('click',function(){
+      var open=nl.classList.toggle('open');
+      mb.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nl.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){nl.classList.remove('open');mb.setAttribute('aria-expanded','false');}
+    });
+  }
+  var cb=document.getElementById('copyBtn'),em=document.getElementById('email');
+  if(cb&&em){
+    cb.addEventListener('click',function(){
+      var txt=em.textContent.trim();
+      var done=function(){var es=document.documentElement.lang==='es';cb.textContent=es?'¡Copiado!':'Copied';setTimeout(function(){cb.textContent=es?'Copiar':'Copy';},1600);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done).catch(function(){select(em);});
+      }else{select(em);}
+    });
+  }
+  function select(node){
+    try{var r=document.createRange();r.selectNodeContents(node);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}
+  }
+  var overlays=document.querySelectorAll('.co');
+  function openOverlay(id){var o=document.getElementById(id);if(!o)return;o.hidden=false;o.setAttribute('aria-hidden','false');document.body.classList.add('co-open');o.scrollTop=0;}
+  function closeOverlays(){overlays.forEach(function(o){o.hidden=true;o.setAttribute('aria-hidden','true');});document.body.classList.remove('co-open');}
+  document.querySelectorAll('[data-overlay]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openOverlay(a.getAttribute('data-overlay'));});});
+  document.querySelectorAll('[data-close-overlay]').forEach(function(b){b.addEventListener('click',closeOverlays);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeOverlays();});
+  var lb=document.getElementById('lightbox'),lbImg=lb?lb.querySelector('img'):null;
+  function openLb(src,alt){if(!lb)return;lbImg.src=src;lbImg.alt=alt||'';lb.hidden=false;lb.setAttribute('aria-hidden','false');lb.scrollTop=0;}
+  function closeLb(){if(!lb)return;lb.hidden=true;lb.setAttribute('aria-hidden','true');lbImg.src='';}
+  document.querySelectorAll('.co-gallery img, .lsi-gal img, .co-feature .media img, .co-zoom img').forEach(function(im){im.addEventListener('click',function(){openLb(im.currentSrc||im.src,im.alt);});});
+  if(lb)lb.addEventListener('click',closeLb);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb&&!lb.hidden){e.stopPropagation();closeLb();}},true);
+  document.querySelectorAll('.case').forEach(function(card){
+    var link=card.querySelector('.case-link'),tile=card.querySelector('.case-tile');
+    if(!link||!tile)return;
+    var ov=link.getAttribute('data-overlay');
+    tile.style.cursor='pointer';tile.setAttribute('role','button');tile.setAttribute('tabindex','0');
+    function go(){if(ov){openOverlay(ov);}else if(link.href){window.open(link.href,'_blank','noopener');}}
+    tile.addEventListener('click',go);
+    tile.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+  });
+
+  // ---- Language toggle (EN / ES) ----
+  var P=[
+   [`Work`,`Trabajos`],[`Capabilities`,`Capacidades`],[`About`,`Sobre mí`],[`Contact`,`Contacto`],[`Get in touch`,`Hablemos`],[`Menu`,`Menú`],
+   [`Open to senior design roles in AI, automation and data`,`Abierta a puestos de diseño senior vinculados a IA, automatización y datos`],
+   [`I design the brand, then I build the tools that produce it.`,`Diseño la marca y después construyo las herramientas que la producen.`],
+   [`13+ years as a senior graphic designer, now pairing that eye with Python, data and AI workflows. I turn repetitive production into scripts, and brand work into systems that scale.`,`Más de 13 años como diseñadora gráfica senior, ahora sumándole a ese ojo Python, datos y flujos con IA. Convierto la producción repetitiva en scripts, y el trabajo de marca en sistemas que escalan.`],
+   [`See the work`,`Ver los trabajos`],
+   [`13+ years`,`13+ años`],[`Remote · LATAM / US / EU`,`Remoto · LATAM / US / EU`],[`English C1`,`Inglés C1`],[`Open to work`,`Disponible para trabajar`],
+   [`Selected work`,`Trabajos seleccionados`],[`Where design meets engineering`,`Donde el diseño se cruza con la ingeniería`],
+   [`A few projects that show the full range: brand and production work, and the tools I build around it.`,`Algunos proyectos que muestran todo el rango: marca y producción, y las herramientas que construyo alrededor.`],
+   [`Full-stack tool`,`Herramienta full-stack`],[`Design automation`,`Automatización de diseño`],[`Client work · Pharma`,`Cliente · Pharma`],[`Brand system`,`Sistema de marca`],[`Design system`,`Sistema de diseño`],
+   [`Self-built product · 2026`,`Producto propio · 2026`],[`Senior designer · since 2022`,`Diseñadora senior · desde 2022`],[`Shopify · live store`,`Shopify · tienda en vivo`],[`End to end · brand + web`,`Punta a punta · marca + web`],[`Systems · tokens · docs`,`Sistemas · tokens · docs`],
+   [`Production automation`,`Automatización de producción`],
+   [`A private web app I built to run my freelance studio: clients, tasks, calendar and invoicing. A plain Python server, installable on my phone, with sync and daily backups.`,`Una web app privada que construí para manejar mi estudio freelance: clientes, tareas, calendario y cobros. Un servidor en Python puro, instalable en el celular, con sincronización y backups diarios.`],
+   [`Runs my whole operation, online or offline.`,`Maneja toda mi operación, con o sin conexión.`],
+   [`Scripts that remove the repetitive part of production, like an Illustrator generator that turns a list of names into finished diplomas, 8 or 80, in minutes.`,`Scripts que eliminan la parte repetitiva de la producción, como un generador en Illustrator que convierte una lista de nombres en diplomas terminados, sean 8 u 80, en minutos.`],
+   [`One-by-one manual work turned into a single click.`,`El laburo manual uno por uno, convertido en un solo clic.`],[`See the process`,`Ver el proceso`],
+   [`Remote senior designer for an international dermocosmetics lab: monthly HTML newsletters for eight brands, launch banners, congress materials and an 88-slide training deck built with AI.`,`Diseñadora senior remota para un laboratorio dermocosmético internacional: newsletters HTML mensuales para ocho marcas, banners de lanzamiento, materiales de congresos y un deck de entrenamiento de 88 slides hecho con IA.`],
+   [`Four years of recurring, multi-brand production.`,`Cuatro años de producción recurrente y multimarca.`],[`View the full LSI case study`,`Ver el caso completo de LSI`],
+   [`A Shopify store I built in French that sells the full LSI Silderma line: catalog, product pages and storefront. Online and selling today.`,`Una tienda Shopify que armé en francés y que vende toda la línea de LSI Silderma: catálogo, páginas de producto y tienda. Online y vendiendo hoy.`],
+   [`A working online store, in a third language.`,`Una tienda online funcionando, en un tercer idioma.`],[`Visit the live store`,`Visitar la tienda`],
+   [`A full brand for a Reiki practitioner, from the design system and social content to a live landing page, built accessibility-first for a deaf and hearing audience.`,`Una marca completa para una reikista, del design system y el contenido para redes a una landing en vivo, pensada con accesibilidad primero para un público sordo y oyente.`],
+   [`Identity, content and a live site, start to finish.`,`Identidad, contenido y un sitio en vivo, de punta a punta.`],[`View the full case study`,`Ver el caso completo`],
+   [`My own brand as a documented design system: tokens, type and components that a person or an AI agent can build from. This page is built with it.`,`Mi propia marca como un design system documentado: tokens, tipografía y componentes con los que una persona o un agente de IA puede construir. Esta página está hecha con él.`],
+   [`A design system an agent can read and build from.`,`Un design system que un agente puede leer y usar para construir.`],
+   [`Automation`,`Automatización`],[`HTML email`,`Email HTML`],[`French`,`Francés`],[`Accessibility`,`Accesibilidad`],[`Components`,`Componentes`],[`Documentation`,`Documentación`],
+   [`What I bring`,`Lo que aporto`],[`Design, with the technical range to back it`,`Diseño, con el rango técnico para respaldarlo`],
+   [`Most designers stop at the file. I keep going into the code, the data and the automation around it.`,`La mayoría de los diseñadores se queda en el archivo. Yo sigo hacia el código, los datos y la automatización alrededor.`],
+   [`Design`,`Diseño`],[`Build`,`Desarrollo`],[`Data & AI`,`Datos e IA`],
+   [`Brand identity and visual systems`,`Identidad de marca y sistemas visuales`],[`Editorial, packaging and motion`,`Editorial, packaging y motion`],[`Digital and print production`,`Producción digital e impresa`],[`Retouching and compositing`,`Retoque y composición`],
+   [`Illustrator and Photoshop scripting (JSX / UXP)`,`Scripting en Illustrator y Photoshop (JSX / UXP)`],[`PWAs and small web apps`,`PWAs y pequeñas web apps`],[`Finishing a software development degree`,`Terminando una Tecnicatura en Desarrollo de Software`],
+   [`Data analysis and reporting`,`Análisis de datos y reportes`],[`AI-integrated workflows built with Claude`,`Flujos integrados con IA, hechos con Claude`],[`Automation, from scripts to content`,`Automatización, de scripts a contenido`],
+   [`Hi, I'm Agostina`,`Hola, soy Agostina`],
+   [`I'm a senior graphic designer with 13+ years of experience`,`Soy diseñadora gráfica senior con más de 13 años de experiencia`],
+   [`, based in Argentina and working remotely with clients across LATAM, the US and Europe. For the last few years I've been folding software and AI into my design work: writing scripts, building small tools and analyzing data, so the work goes further than a single deliverable.`,`, radicada en Argentina y trabajando de forma remota con clientes de LATAM, Estados Unidos y Europa. En los últimos años fui sumando software e IA a mi trabajo de diseño: escribiendo scripts, armando herramientas chicas y analizando datos, para que el trabajo llegue más lejos que una sola pieza.`],
+   [`I like clear briefs and shipping things that actually work. Given the choice, I'd rather build the system once than repeat the task. I'm finishing a software development degree and looking for a role where design, automation and data meet.`,`Me gustan los briefs claros y entregar cosas que de verdad funcionan. Si puedo elegir, prefiero construir el sistema una vez antes que repetir la tarea. Estoy terminando una Tecnicatura en Desarrollo de Software y busco un rol donde se crucen diseño, automatización y datos.`],
+   [`Based in Argentina`,`En Argentina`],[`Remote-first`,`Remoto`],[`Software dev student`,`Estudiante de desarrollo`],
+   [`Let's work together`,`Trabajemos juntos`],
+   [`Open to senior design roles that touch AI, automation or data. Tell me what you're building and I'll get back within 48 hours.`,`Disponible para roles de diseño senior que toquen IA, automatización o datos. Contame qué estás construyendo y te respondo en menos de 48 horas.`],
+   [`Email me`,`Escribime`],[`Live demo`,`Demo en vivo`],[`Try it with your name`,`Probalo con tu nombre`],[`Student name`,`Nombre del alumno`],[`Same rule as the real script: the name starts at 72px and shrinks, down to 60%, until it fits the line.`,`La misma regla que el script real: el nombre arranca en 72px y se achica, hasta un 60%, hasta que entra en la línea.`],[`Download PNG`,`Descargar PNG`],[`Download CV`,`Descargar CV`],[`Copy`,`Copiar`],
+   [`Senior Graphic Designer · AI + Data · Ciudad Evita, Argentina`,`Diseñadora gráfica senior · IA + Datos · Ciudad Evita, Argentina`],
+   [`LSI Silderma — case study`,`LSI Silderma — caso de estudio`],[`Close`,`Cerrar`],[`Back to the portfolio`,`Volver al portfolio`],
+   [`Case study · Dermocosmetics · Since 2022`,`Caso de estudio · Dermocosmética · Desde 2022`],
+   [`Senior designer for an international pharma-cosmetics lab`,`Diseñadora senior para un laboratorio dermocosmético internacional`],
+   [`LSI Silderma is a dermocosmetics laboratory with a multi-brand line sold across Europe, LATAM and Asia. I've been their remote senior designer since 2022, running the recurring work that keeps the brands consistent month after month: email newsletters, launch banners, congress materials, training decks, social content, and a live e-commerce store. Everything ships in English and Spanish, and some of it in French.`,`LSI Silderma es un laboratorio dermocosmético con una línea multimarca que se vende en Europa, LATAM y Asia. Soy su diseñadora senior remota desde 2022, llevando el trabajo recurrente que mantiene las marcas consistentes mes a mes: newsletters, banners de lanzamiento, materiales de congresos, decks de entrenamiento, contenido para redes y una tienda de e-commerce en vivo. Todo sale en inglés y español, y una parte en francés.`],
+   [`Senior designer, ongoing`,`Diseñadora senior, en curso`],[`Brands in one visual system`,`Marcas en un solo sistema visual`],[`Monthly`,`Mensual`],[`Newsletter cadence, to spec`,`Cadencia de newsletters, a pauta`],[`Produced in three languages`,`Producido en tres idiomas`],
+   [`What I do for them`,`Lo que hago para ellos`],[`A full production system`,`Un sistema de producción completo`],
+   [`The brands share one visual language but each has its own color, audience and rules. I produce every piece to that system, keep it consistent across a dozen products, and turn work around on time. A lot repeats every month, so I build templates and scripts that make production faster without losing the detail.`,`Las marcas comparten un lenguaje visual pero cada una tiene su color, su público y sus reglas. Produzco cada pieza siguiendo ese sistema, lo mantengo consistente entre una docena de productos, y entrego a tiempo. Mucho se repite cada mes, así que armo plantillas y scripts que aceleran la producción sin perder el detalle.`],
+   [`HTML email newsletters`,`Newsletters en HTML`],[`Monthly newsletters hand-built in HTML to a strict 600px spec, one per brand, with brand-colored headers and a star-rating survey footer. Client copy used word for word.`,`Newsletters mensuales hechas a mano en HTML con una pauta estricta de 600px, una por marca, con headers del color de cada marca y un pie con encuesta de estrellas. El texto del cliente se usa palabra por palabra.`],
+   [`E-banners & launches`,`E-banners y lanzamientos`],[`Launch e-banners and teaser art for new product lines, each matched to its brand color and claims.`,`E-banners de lanzamiento y piezas teaser para nuevas líneas, cada una con el color y los claims de su marca.`],
+   [`Congress & print`,`Congresos e impresión`],[`Roll-up banners, invitations and key visuals for dermatology congresses, from Panama to JDP Paris.`,`Roll-ups, invitaciones y key visuals para congresos de dermatología, de Panamá a JDP París.`],
+   [`Training manuals & decks`,`Manuales y decks de entrenamiento`],[`Product training manuals for the medical team. I rebuilt an 88-page manual as an 88-slide deck, generated with AI so every section stayed consistent.`,`Manuales de entrenamiento de producto para el equipo médico. Rearmé un manual de 88 páginas como un deck de 88 slides, generado con IA para que cada sección quedara consistente.`],
+   [`Social content`,`Contenido para redes`],[`Posts, stories and reel covers across the brands, adapted for each market and kept on-system.`,`Posteos, historias y portadas de reels para las marcas, adaptados a cada mercado y fieles al sistema.`],
+   [`I built and run a live Shopify store, in French, that sells the full LSI line, start to finish.`,`Construí y mantengo una tienda Shopify en vivo, en francés, que vende toda la línea de LSI, de punta a punta.`],
+   [`Featured`,`Destacado`],[`A live Shopify store, in French`,`Una tienda Shopify en vivo, en francés`],
+   [`An e-commerce storefront I built on Shopify to sell the LSI line to a French market. Catalog, product pages and the full storefront, in French. Live and selling today.`,`Una tienda de e-commerce que construí en Shopify para vender la línea de LSI a un mercado francés. Catálogo, páginas de producto y toda la tienda, en francés. En vivo y vendiendo hoy.`],
+   [`Selected pieces`,`Piezas seleccionadas`],[`Recent work, as it shipped`,`Trabajo reciente, tal como salió`],
+   [`DIABDERMIX training manual`,`Manual de entrenamiento DIABDERMIX`],[`88-slide deck rebuilt from an 88-page manual, with AI.`,`Deck de 88 slides rearmado desde un manual de 88 páginas, con IA.`],
+   [`SILDERMIX GEL newsletter`,`Newsletter de SILDERMIX GEL`],[`Monthly HTML email, built to the 600px brand spec.`,`Email HTML mensual, con la pauta de 600px de la marca.`],
+   [`VITILSI e-banner`,`E-banner de VITILSI`],[`World Vitiligo Day, 2026.`,`Día Mundial del Vitiligo, 2026.`],[`BIOTOPIX LIFT e-banner`,`E-banner de BIOTOPIX LIFT`],[`Lifting line, 2026.`,`Línea lifting, 2026.`],
+   [`TRANACIX roll-up`,`Roll-up de TRANACIX`],[`Congress banner, melasma line.`,`Banner de congreso, línea melasma.`],
+   [`Parece Magia Reiki — case study`,`Parece Magia Reiki — caso de estudio`],[`Case study · Brand & content · End to end`,`Caso de estudio · Marca y contenido · Punta a punta`],
+   [`A full brand for a Reiki practitioner, built accessibility-first`,`Una marca completa para una reikista, pensada con accesibilidad primero`],
+   [`Parece Magia is the brand of a Reiki practitioner who teaches and works in both spoken Spanish and Argentine Sign Language. I built the whole thing: the visual identity and design system, the social content, the downloadables, the automations and a live landing page, designed from the start for a deaf and hearing audience, with high contrast and one clear idea per piece.`,`Parece Magia es la marca de una reikista que enseña y trabaja en español hablado y en Lengua de Señas Argentina. Construí todo: la identidad visual y el design system, el contenido para redes, los descargables, las automatizaciones y una landing en vivo, pensada desde el inicio para un público sordo y oyente, con alto contraste y una idea clara por pieza.`],
+   [`End to end`,`Punta a punta`],[`Brand, content, web and automation`,`Marca, contenido, web y automatización`],[`Live`,`En vivo`],[`Landing shipped on Netlify`,`Landing publicada en Netlify`],[`Accessible in two languages`,`Accesible en dos idiomas`],[`Automated`,`Automatizado`],[`Certificates and emails`,`Certificados y emails`],
+   [`What I made`,`Lo que hice`],[`Everything the brand needs to run`,`Todo lo que la marca necesita para funcionar`],
+   [`Brand & design system`,`Marca y design system`],[`Logo, palette, typography and a documented design system the whole brand is built from.`,`Logo, paleta, tipografía y un design system documentado del que sale toda la marca.`],
+   [`Social & reel covers`,`Redes y portadas de reels`],[`Carousels, story templates and reel covers, accessibility-first, one idea per piece.`,`Carruseles, plantillas de historias y portadas de reels, accesibilidad primero, una idea por pieza.`],
+   [`Downloadable PDFs & guides`,`PDFs y guías descargables`],[`Self-treatment guides and course materials laid out as polished, downloadable PDFs.`,`Guías de autotratamiento y materiales del curso, diagramados como PDFs prolijos y descargables.`],
+   [`Presentations`,`Presentaciones`],[`The Nivel 1 workshop presentation, in Spanish and sign language, ready to teach from.`,`La presentación del taller Nivel 1, en español y en lengua de señas, lista para dictar.`],
+   [`Automatic HTML emails`,`Emails HTML automáticos`],[`Workshop emails built in HTML and set up to go out automatically to each student.`,`Mails del taller hechos en HTML y configurados para salir automáticamente a cada alumno.`],
+   [`Certificate automation`,`Certificados automáticos`],[`A script that generates one personalized diploma per student from a template, in minutes.`,`Un script que genera un diploma personalizado por alumno desde una plantilla, en minutos.`],
+   [`Video reels`,`Reels de video`],[`Edited promo reels for the workshops, subtitled and on-brand.`,`Reels promocionales editados para los talleres, subtitulados y fieles a la marca.`],
+   [`Live landing page`,`Landing en vivo`],[`A link-in-bio site shipped on Netlify, with workshops, booking and the catalog.`,`Un sitio tipo link-in-bio publicado en Netlify, con talleres, reservas y el catálogo.`],
+   [`A live link-in-bio site`,`Un sitio link-in-bio en vivo`],
+   [`A link-in-bio landing I designed and shipped on Netlify: workshops with open enrollment, WhatsApp booking, services and the catalog, all in the brand's sea-and-whale world.`,`Una landing tipo link-in-bio que diseñé y publiqué en Netlify: talleres con inscripción abierta, reservas por WhatsApp, servicios y el catálogo, todo en el mundo de mar y ballenas de la marca.`],
+   [`A look at the work`,`Un vistazo al trabajo`],
+   [`Automation`,`Automatización`],[`Workshop emails, start to finish`,`Mails del taller, de punta a punta`],
+   [`Automated — it sends itself`,`Automático — sale solo`],
+   [`Enrollment confirmation`,`Confirmación de inscripción`],[`When someone signs up, they get the session details.`,`Cuando alguien se anota, recibe los datos del encuentro.`],
+   [`Reminder + Zoom link`,`Recordatorio + link de Zoom`],[`A day before, the link to join the session.`,`Un día antes, el link para entrar a la reunión.`],
+   [`Closing + certificate`,`Cierre + certificado`],[`After the workshop: the materials and the certificate of participation.`,`Al terminar: los materiales y el certificado de participación.`],
+   [`Designed and set up to run on its own — all in the brand's sea-and-whale world.`,`Diseñados y configurados para salir solos — todo en el mundo de mar y ballenas de la marca.`],
+   [`Social carousel`,`Carrusel para redes`],[`Workshop presentation`,`Presentación del taller`],[`Nivel 1, Spanish and sign language.`,`Nivel 1, español y lengua de señas.`],[`Video reel`,`Reel de video`],[`One personalized diploma per student (sample name).`,`Un diploma personalizado por alumno (nombre de ejemplo).`],[`Gift voucher`,`Voucher de regalo`],[`"Hago Reiki en dos idiomas." · 25s, subtitled.`,`"Hago Reiki en dos idiomas." · 25s, subtitulado.`],
+   [`Production automation — case study`,`Automatización de producción — caso de estudio`],[`Case study · Design + code`,`Caso de estudio · Diseño + código`],
+   [`Production`,`Automatización de`],[`automation`,`producción`],
+   [`Scripts that take the repetitive work out of design production`,`Scripts que le sacan la parte repetitiva a la producción de diseño`],
+   [`Some design work is really data work in disguise: the same template, filled in over and over. I write scripts that do that part, so a job that used to mean editing one file per person becomes a single run. The clearest example is the diploma generator I built for a Reiki workshop, which turns a plain list of names into a folder of finished, personalized certificates.`,`Parte del trabajo de diseño es, en el fondo, trabajo de datos disfrazado: la misma plantilla, completada una y otra vez. Escribo scripts que hacen esa parte, así un trabajo que antes era editar un archivo por persona pasa a ser una sola corrida. El ejemplo más claro es el generador de diplomas que armé para un taller de Reiki, que convierte una simple lista de nombres en una carpeta de certificados personalizados y listos.`],
+   [`From a name list to finished PDFs`,`De una lista de nombres a PDFs listos`],[`8 to 80`,`8 a 80`],[`Students per run, same effort`,`Alumnos por corrida, el mismo esfuerzo`],[`Minutes`,`Minutos`],[`Instead of one file at a time`,`En vez de un archivo por vez`],[`Runs locally, near-zero cost`,`Corre local, costo casi cero`],
+   [`How it works`,`Cómo funciona`],[`From a text file to finished diplomas`,`De un archivo de texto a diplomas terminados`],
+   [`Data`,`Datos`],[`A plain text file with the course title, date, modality and the list of student names.`,`Un archivo de texto con el título del taller, la fecha, la modalidad y la lista de nombres.`],
+   [`Template`,`Plantilla`],[`My Illustrator diploma, with the changing fields named as layers: name, title, date, modality.`,`Mi diploma de Illustrator, con los campos que cambian nombrados como capas: nombre, título, fecha, modalidad.`],
+   [`The JSX reads the file, fills each field, and shrinks a long name so it always fits the line.`,`El JSX lee el archivo, completa cada campo y achica un nombre largo para que siempre entre en la línea.`],
+   [`Output`,`Salida`],[`One finished, personalized PDF per student, named and saved in a dated folder.`,`Un PDF terminado y personalizado por alumno, nombrado y guardado en una carpeta con la fecha.`],
+   [`The engine`,`El motor`],[`Real code, not a plugin`,`Código real, no un plugin`],
+   [`Input · datos_certificados.txt`,`Entrada · datos_certificados.txt`],[`Output · one PDF per name`,`Salida · un PDF por nombre`],
+   [`I tested Adobe's cloud data-merge and dropped it.`,`Probé el data-merge en la nube de Adobe y lo descarté.`],[`The local script is faster, needs no uploads, and costs almost nothing to run`,`El script local es más rápido, no necesita subir nada y casi no cuesta nada`],[`, so making a new batch is just writing a small text file, whether it is 8 students or 80.`,`, así que armar una nueva tanda es solo escribir un archivo de texto chico, sean 8 alumnos u 80.`],
+   [`Why it matters`,`Por qué importa`],[`The same idea, across production`,`La misma idea, en toda la producción`],
+   [`This is the thread through a lot of my work: find the repetitive part, and build the tool that removes it. The same approach powers my print-production scripts, which nest and pack images for Illustrator layouts, written in JSX and Python. It is design work that pays for itself in hours saved.`,`Este es el hilo de buena parte de mi trabajo: encontrar la parte repetitiva y construir la herramienta que la elimina. El mismo enfoque mueve mis scripts de producción para impresión, que encastran y acomodan imágenes en layouts de Illustrator, escritos en JSX y Python. Es trabajo de diseño que se paga solo en horas ahorradas.`],
+   [`Online Agostina Design System — case study`,`Online Agostina Design System — caso de estudio`],[`Case study · Brand & system`,`Caso de estudio · Marca y sistema`],
+   [`My brand, turned into a system others can build from`,`Mi marca, convertida en un sistema sobre el que otros pueden construir`],
+   [`I turned my own brand into a documented design system: color tokens, typography, spacing, components and guidelines, with the logos and the signature holographic gradient. It is structured so a person or an AI agent can read it and build on it, and this very portfolio is built from it.`,`Convertí mi propia marca en un design system documentado: tokens de color, tipografía, espaciado, componentes y guías, con los logos y el gradiente holográfico característico. Está estructurado para que una persona o un agente de IA pueda leerlo y construir encima, y este mismo portfolio está hecho con él.`],
+   [`Color and type tokens`,`Tokens de color y tipografía`],[`Reusable components`,`Componentes reutilizables`],[`Agent-ready`,`Para agentes`],[`Readable by people and AI`,`Legible por personas e IA`],[`This page`,`Esta página`],[`Built from the system`,`Hecha con el sistema`],
+   [`What's inside`,`Qué incluye`],[`One brand, fully systemized`,`Una marca, totalmente sistematizada`],
+   [`Color tokens`,`Tokens de color`],[`A violet primary, an iridescent pastel spectrum, and violet-tinted neutrals, as named tokens.`,`Un violeta primario, un espectro pastel iridiscente y neutros con tinte violeta, como tokens con nombre.`],
+   [`Typography`,`Tipografía`],[`A high-contrast serif for display and a geometric sans for everything else, with a full type scale.`,`Una serif de alto contraste para los títulos y una sans geométrica para el resto, con una escala tipográfica completa.`],
+   [`Spacing & radius`,`Espaciado y radios`],[`An 8px spacing rhythm and soft, consistent corner radii across the whole system.`,`Un ritmo de espaciado de 8px y radios de esquina suaves y consistentes en todo el sistema.`],
+   [`Buttons, cards, badges, tags, inputs and brand pieces, each with its own guidelines.`,`Botones, tarjetas, badges, tags, inputs y piezas de marca, cada uno con su guía.`],
+   [`Guidelines`,`Guías`],[`Usage notes for every token and component, so the system is used the same way every time.`,`Notas de uso para cada token y componente, para que el sistema se use igual siempre.`],
+   [`The gem logo in its variants and the signature holographic gradient, ready to drop in.`,`El isotipo gema en sus variantes y el gradiente holográfico característico, listos para usar.`],
+   [`The system, in pieces`,`El sistema, por partes`],[`The signature gradient and the mark`,`El gradiente y el isotipo`],
+   [`On white`,`Sobre blanco`],[`On gradient`,`Sobre gradiente`],[`On dark`,`Sobre oscuro`],
+   [`Brand violet`,`Violeta de marca`],[`Iridescent spectrum`,`Espectro iridiscente`],[`Neutrals`,`Neutros`],
+   [`Design that shines`,`Diseño que brilla`],[`Clear systems, built to scale.`,`Sistemas claros, hechos para escalar.`],
+   [`Under the hood`,`Por dentro`],[`Documented so agents can build on it`,`Documentado para que los agentes construyan encima`],
+   [`Every color, font and component lives in one documented source, so the look stays consistent and anyone, human or AI, can build new pieces that fit.`,`Cada color, fuente y componente vive en una única fuente documentada, así el look se mantiene consistente y cualquiera, persona o IA, puede construir piezas nuevas que encajan.`],
+   [`This very page is built from the system`,`Esta misma página está hecha con el sistema`],[`— the tokens, type and components you are reading are the same ones documented inside it.`,`— los tokens, la tipografía y los componentes que estás leyendo son los mismos que están documentados adentro.`],
+   [`Explore the system`,`Explorar el sistema`],
+   [`Brand identity`,`Identidad de marca`],[`Identity · logo system · 2025`,`Identidad · sistema de logo · 2025`],
+   [`An identity for a sunglasses label: a logotype with the glasses built into the letters, a badge, a bright palette and ready-to-post story templates.`,`Una identidad para una marca de anteojos de sol: un logotipo con los anteojos metidos en las letras, un sello, una paleta brillante y plantillas de historias listas para publicar.`],
+   [`A complete identity, from logotype to social kit.`,`Una identidad completa, del logotipo al kit de redes.`],
+   [`Logo design`,`Diseño de logo`],[`View the brand`,`Ver la marca`],
+   [`MONCHI SG Sunglasses — brand identity`,`MONCHI SG Sunglasses — identidad de marca`],[`Case study · Brand identity`,`Caso de estudio · Identidad de marca`],
+   [`A playful identity for a sunglasses label`,`Una identidad divertida para una marca de anteojos de sol`],
+   [`A brand identity I designed for MONCHI SG, a sunglasses label. The brief asked for something fun and feminine that still read as a real product brand, so I built the identity around a playful display typeface, with the sunglasses worked right into the letters, then extended it into a full kit: lockups, a bright palette, brand fonts, and a set of social story templates the brand can post with on its own.`,`Una identidad de marca que diseñé para MONCHI SG, una marca de anteojos de sol. El brief pedía algo divertido y femenino que igual se leyera como una marca de producto real, así que armé la identidad sobre una tipografía display divertida, con los anteojos metidos en las letras, y después la extendí a un kit completo: versiones del logo, una paleta brillante, tipografías de marca y un set de plantillas de historias con las que la marca puede publicar sola.`],
+   [`Logotype`,`Logotipo`],[`Display type + custom details`,`Tipografía display + detalles propios`],
+   [`3 lockups`,`3 versiones`],[`Horizontal, badge and monochrome`,`Horizontal, sello y monocromo`],
+   [`11 templates`,`11 plantillas`],[`Ready-to-post story backgrounds`,`Fondos de historias listos para publicar`],
+   [`Print + digital`,`Impreso + digital`],[`CMYK and RGB, delivered ready`,`CMYK y RGB, entregados listos`],
+   [`What I made`,`Qué hice`],[`One label, a whole identity`,`Una marca, una identidad completa`],
+   [`A playful logotype — a display typeface with the sunglasses worked into the letters and little shine marks on each side.`,`Un logotipo divertido — una tipografía display con los anteojos integrados en las letras y pequeños destellos a cada lado.`],
+   [`Logo system`,`Sistema de logo`],
+   [`A horizontal lockup, a circular badge and monochrome versions, so the brand works at any size and on any background.`,`Una versión horizontal, un sello circular y versiones monocromas, para que la marca funcione en cualquier tamaño y sobre cualquier fondo.`],
+   [`Color palette`,`Paleta de color`],
+   [`A bright, sunny palette — magenta, coral, amber and blush — that feels playful but stays coherent.`,`Una paleta brillante y soleada — magenta, coral, ámbar y rosa — que es divertida pero se mantiene coherente.`],
+   [`Brand fonts`,`Tipografías de marca`],
+   [`Two brand fonts: a display face for the logotype and a friendly rounded sans for everything else.`,`Dos tipografías de marca: una display para el logotipo y una sans redondeada y amigable para todo lo demás.`],
+   [`Story templates`,`Plantillas de historias`],
+   [`Eleven ready-to-post story backgrounds in the brand's colors and shapes, for day-to-day social.`,`Once fondos de historias listos para publicar, con los colores y las formas de la marca, para el día a día en redes.`],
+   [`Delivery`,`Entrega`],
+   [`Final files in CMYK for print and RGB for social, plus the editable source, handed over ready to use.`,`Archivos finales en CMYK para imprenta y RGB para redes, más el fuente editable, entregado listo para usar.`],
+   [`The mark`,`La marca`],[`The logotype and the badge`,`El logotipo y el sello`],
+   [`Built into the letters`,`Metido en las letras`],
+   [`The sunglasses sit inside the O and the little strokes on each side read as a flash of sun. The horizontal lockup is the primary logo; the circular badge is for profile pictures, stickers and stamps.`,`Los anteojos van dentro de la O y los trazos a cada lado se leen como un destello de sol. La versión horizontal es el logo principal; el sello circular es para fotos de perfil, stickers y sellos.`],
+   [`Badge`,`Sello`],[`Display type`,`Tipografía display`],
+   [`The system`,`El sistema`],[`Color and lockups`,`Color y versiones`],
+   [`Brand palette`,`Paleta de marca`],[`Brand typeface`,`Tipografía de marca`],
+   [`Nunito · rounded sans`,`Nunito · sans redondeada`],[`Sunny, friendly, easy to read.`,`Soleada, amigable, fácil de leer.`],
+   [`Display face · the logotype`,`Tipografía display · el logotipo`],
+   [`A display typeface used for the MONCHI wordmark; the sunglasses and shine marks are the custom part.`,`Una tipografía display para el logotipo MONCHI; los anteojos y los destellos son la parte propia.`],
+   [`Social`,`Redes`],[`A story system the brand can run itself`,`Un sistema de historias que la marca puede manejar sola`],
+   [`Eleven story backgrounds in the brand's colors and shapes, so MONCHI can post consistently without a designer every time.`,`Once fondos de historias con los colores y las formas de la marca, para que MONCHI publique de forma consistente sin un diseñador cada vez.`],
+   [`Out in the world`,`En el mundo real`],[`The brand, on real products`,`La marca, en productos reales`],
+   [`Packaging & unboxing`,`Packaging y unboxing`],
+   [`Printed mailer boxes, tissue and sticker — "muchas gracias, ya tenés tus lentes favoritos."`,`Cajas impresas, papel de seda y sticker — "muchas gracias, ya tenés tus lentes favoritos."`],
+   [`At the market`,`En la feria`],[`Branded lens pouch on the stall, out in the sun.`,`Funda de lentes con la marca en el puesto, al sol.`],
+   [`The same logotype holds up off-screen — on cardboard, tissue and fabric. The brand is live and selling: on Instagram, and in the client's own online shop, which she set up herself from the kit I delivered.`,`El mismo logotipo funciona fuera de la pantalla — en cartón, papel y tela. La marca está en vivo y vendiendo: en Instagram, y en la tienda online de la clienta, que ella misma armó con el kit que le entregué.`],
+  ];
+  var T={};for(var pi=0;pi<P.length;pi++){T[P[pi][0]]=P[pi][1];}
+  var SKIPCLASS=['cg-read','co-code','co-input','co-codebar','fn','co-urlpill','brand','email'];
+  function skipNode(el){while(el){if(el.nodeName==='SCRIPT'||el.nodeName==='STYLE')return true;if(el.classList){for(var i=0;i<SKIPCLASS.length;i++){if(el.classList.contains(SKIPCLASS[i]))return true;}}el=el.parentElement;}return false;}
+  var tnodes=[];
+  (function(){var wk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var n;while(n=wk.nextNode()){if(n.nodeValue&&n.nodeValue.trim()&&!skipNode(n.parentElement)){tnodes.push([n,n.nodeValue]);}}})();
+  function applyLang(lang){
+    for(var i=0;i<tnodes.length;i++){var node=tnodes[i][0],en=tnodes[i][1];
+      if(lang==='es'){var key=en.trim();var es=T[key];node.nodeValue=(es!=null)?en.replace(key,es):en;}
+      else{node.nodeValue=en;}
+    }
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===lang?'true':'false');});
+    try{localStorage.setItem('gv_lang',lang);}catch(e){}
+  }
+  document.querySelectorAll('[data-lang]').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang'));});});
+  var savedLang=(/^es\b/i.test(navigator.language||'')?'es':'en');try{var sv=localStorage.getItem('gv_lang');if(sv==='es'||sv==='en')savedLang=sv;}catch(e){}
+  applyLang(savedLang);
+})();
+</script>
+<script>
+(function(){
+  var hero=document.querySelector('.hero'), cv=document.querySelector('.hero-canvas');
+  if(!hero||!cv||!cv.getContext) return;
+  var ctx=cv.getContext('2d'); if(!ctx) return;
+  var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var DPR=Math.min(window.devicePixelRatio||1,2), W=1, H=1;
+  function resize(){W=hero.clientWidth||1;H=hero.clientHeight||1;cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);ctx.setTransform(DPR,0,0,DPR,0,0);}
+  resize();
+  var cols=[[148,101,253],[149,147,255],[188,243,200],[194,244,223],[254,213,71],[255,182,173],[255,189,197],[235,200,225]];
+  var blobs=[];
+  for(var i=0;i<7;i++){blobs.push({x:Math.random(),y:Math.random()*0.92,r:0.26+Math.random()*0.2,c:cols[i%cols.length],px:Math.random()*6.28,py:Math.random()*6.28,sx:0.4+Math.random()*0.5,sy:0.4+Math.random()*0.5,ax:0.05+Math.random()*0.05,ay:0.05+Math.random()*0.05,pf:0.03+i*0.008});}
+  var mx=0.5,my=0.42,tmx=0.5,tmy=0.42;
+  hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();if(!r.width)return;tmx=(e.clientX-r.left)/r.width;tmy=(e.clientY-r.top)/r.height;},{passive:true});
+  hero.addEventListener('pointerleave',function(){tmx=0.5;tmy=0.42;});
+  var t0=Date.now();
+  function paint(t){
+    mx+=(tmx-mx)*0.05;my+=(tmy-my)*0.05;
+    ctx.clearRect(0,0,W,H);
+    var maxd=Math.max(W,H),i,b,cx,cy,rad,c,g;
+    for(i=0;i<blobs.length;i++){b=blobs[i];
+      cx=(b.x+Math.cos(t*b.sx*0.3+b.px)*b.ax+(mx-0.5)*b.pf*(i%2?-1:1))*W;
+      cy=(b.y+Math.sin(t*b.sy*0.3+b.py)*b.ay+(my-0.5)*b.pf*(i%2?1:-1))*H;
+      rad=b.r*maxd;c=b.c;g=ctx.createRadialGradient(cx,cy,0,cx,cy,rad);
+      g.addColorStop(0,'rgba('+c[0]+','+c[1]+','+c[2]+',0.42)');
+      g.addColorStop(0.5,'rgba('+c[0]+','+c[1]+','+c[2]+',0.13)');
+      g.addColorStop(1,'rgba('+c[0]+','+c[1]+','+c[2]+',0)');
+      ctx.fillStyle=g;ctx.fillRect(cx-rad,cy-rad,rad*2,rad*2);
+    }
+    var gr=maxd*0.26,gx=mx*W,gy=my*H,gg=ctx.createRadialGradient(gx,gy,0,gx,gy,gr);
+    gg.addColorStop(0,'rgba(255,255,255,0.32)');gg.addColorStop(1,'rgba(255,255,255,0)');
+    ctx.fillStyle=gg;ctx.fillRect(gx-gr,gy-gr,gr*2,gr*2);
+  }
+  var raf=null;
+  function loop(){paint((Date.now()-t0)/1000);raf=requestAnimationFrame(loop);}
+  function start(){if(!raf)raf=requestAnimationFrame(loop);}
+  function stop(){if(raf){cancelAnimationFrame(raf);raf=null;}}
+  window.addEventListener('resize',function(){resize();if(reduce)paint(0);},{passive:true});
+  if(reduce){mx=tmx;my=tmy;paint(0);}
+  else{start();document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});}
+})();
+</script>
+
+<script>
+/* CV download: inside claude.ai a plain download link is blocked, so save through the
+   downloads capability; anywhere else (e.g. a public host) the normal link works. */
+(function(){
+  if(!window.claude||typeof window.claude.use!=='function') return;
+  var dl=null, ready=window.claude.use('downloads').then(function(d){dl=d;return d;}).catch(function(){return null;});
+  document.querySelectorAll('a[href$=".pdf"][download]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      ready.then(function(d){
+        if(!d){window.open(a.href,'_blank','noopener');return;}
+        return fetch(a.getAttribute('href')).then(function(r){if(!r.ok)throw new Error('fetch');return r.blob();})
+          .then(function(b){return d.save({filename:'Agostina-Villamayor-CV.pdf',data:b});})
+          .catch(function(err){if(!err||err.code!=='declined')window.open(a.href,'_blank','noopener');});
+      });
+    });
+  });
+})();
+</script>
+
+<script>
+/* Live diploma demo: one canvas renders both the preview and the downloadable PNG */
+(function(){
+  var cv=document.getElementById('cgCanvas'),inp=document.getElementById('cgName'),rd=document.getElementById('cgRead'),sv=document.getElementById('cgSave');
+  if(!cv||!inp||!cv.getContext)return;
+  var ctx=cv.getContext('2d'),img=new Image(),BASE=72,MIN=BASE*0.6,MAXW=860,FONT='"Playfair Display",Georgia,serif',ok=false;
+  function draw(){
+    if(!ok)return;
+    var name=inp.value.trim()||'Luna Herrera',size=BASE;
+    ctx.clearRect(0,0,1200,849);ctx.drawImage(img,0,0,1200,849);
+    ctx.font='italic 700 '+size+'px '+FONT;
+    while(ctx.measureText(name).width>MAXW&&size>MIN){size-=1;ctx.font='italic 700 '+size+'px '+FONT;}
+    ctx.fillStyle='#a65a3a';ctx.textAlign='center';ctx.textBaseline='alphabetic';
+    ctx.fillText(name,600,400,MAXW);
+    var es=document.documentElement.lang==='es';
+    rd.textContent=(es?'tamaño: ':'size: ')+(size<BASE?BASE+'px → '+size+'px'+(es?' (achicado para que entre)':' (shrunk to fit)'):BASE+'px'+(es?' (entra sin achicar)':' (fits as is)'));
+  }
+  function go(){ok=true;draw();try{cv.toDataURL();sv.hidden=false;}catch(e){sv.hidden=true;}}
+  img.onload=function(){(document.fonts&&document.fonts.load?document.fonts.load('italic 700 72px "Playfair Display"'):Promise.resolve()).then(go,go);};
+  img.src='cert-blank.jpg';
+  inp.addEventListener('input',draw);
+  document.querySelectorAll('[data-lang]').forEach(function(b){b.addEventListener('click',draw);});
+  var dl=null;if(window.claude&&typeof window.claude.use==='function'){window.claude.use('downloads').then(function(d){dl=d;}).catch(function(){});}
+  sv.addEventListener('click',function(){
+    var fn='Certificado_'+((inp.value.trim()||'Luna Herrera').replace(/[^\w\u00C0-\u017F]+/g,'_'))+'.png';
+    cv.toBlob(function(b){
+      if(!b)return;
+      if(dl){dl.save({filename:fn,data:b}).catch(function(){});return;}
+      var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=fn;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href);},2000);
+    },'image/png');
+  });
+})();
+</script>
+
+<script>
+/* Holographic tilt: mouse/pen only, off for reduced motion */
+(function(){
+  if(!window.matchMedia||window.matchMedia('(prefers-reduced-motion: reduce)').matches||!window.matchMedia('(hover: hover)').matches)return;
+  document.querySelectorAll('.work-grid .case').forEach(function(card){
+    card.classList.add('holo');
+    var max=card.classList.contains('featured')?3:7,raf=0,ev=null;
+    function paint(){raf=0;var r=card.getBoundingClientRect();if(!r.width)return;
+      var x=(ev.clientX-r.left)/r.width,y=(ev.clientY-r.top)/r.height;
+      card.style.setProperty('--ry',((x-.5)*2*max).toFixed(2)+'deg');
+      card.style.setProperty('--rx',((.5-y)*2*max).toFixed(2)+'deg');
+      var t=card.querySelector('.case-tile').getBoundingClientRect();
+      card.style.setProperty('--mx',((ev.clientX-t.left)/t.width*100).toFixed(1)+'%');
+      card.style.setProperty('--my',((ev.clientY-t.top)/t.height*100).toFixed(1)+'%');
+      card.style.setProperty('--gx',(x*100).toFixed(1)+'%');card.style.setProperty('--gy',(y*100).toFixed(1)+'%');}
+    card.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;ev=e;card.classList.add('is-live');if(!raf)raf=requestAnimationFrame(paint);});
+    card.addEventListener('pointerleave',function(){card.classList.remove('is-live');card.style.setProperty('--rx','0deg');card.style.setProperty('--ry','0deg');});
+  });
+})();
+</script>
+
+<script>
+/* Chip colors keep cycling across cards, so every card gets its own slice of the spectrum */
+(function(){
+  var pal=['#e4dcff','#d4f5dc','#fff3b0','#ffd9d3','#d6f6e9','#f3dcec'];
+  document.querySelectorAll('.case-stack .chip').forEach(function(c,i){c.style.background=pal[i%pal.length];});
+  var strong=['#a585fd','#8fe0a6','#fed547','#ff9f93','#9593ff','#f59bb0','#7fd8c0'];
+  document.querySelectorAll('.co-stat').forEach(function(c,i){c.style.setProperty('--stat',strong[i%strong.length]);});
+  document.querySelectorAll('.co-step').forEach(function(c,i){c.style.setProperty('--stat',strong[(i+1)%strong.length]);});
+})();
+</script>
+<script>
+/* Reading progress line under the nav */
+(function(){
+  var bar=document.querySelector('.nav-progress');if(!bar)return;var raf=0;
+  function upd(){raf=0;var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0).toFixed(4)+')';}
+  addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(upd);},{passive:true});
+  addEventListener('resize',upd,{passive:true});upd();
+})();
+</script>
+
+</body></html>
