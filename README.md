@@ -10,6 +10,6 @@ Sitio estático (HTML, CSS y JavaScript, sin dependencias ni build).
 Conectar este repo en Netlify (Add new site → Import an existing project → GitHub → `portfolio`).
 No hace falta comando de build; el directorio de publicación es la raíz (`.`).
 
-El nombre del sitio esperado es `agostinavillamayor` (https://agostinavillamayor.netlify.app):
+El nombre del sitio es `portfolio-agostinavillamayor` (https://portfolio-agostinavillamayor.netlify.app):
 la vista previa para compartir (`og:image`) apunta a esa dirección. Si se usa otro nombre o un
 dominio propio, actualizar las etiquetas `og:image`, `og:url` y `canonical` en `index.html`.
