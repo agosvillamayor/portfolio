@@ -251,7 +251,8 @@ body.co-open{overflow:hidden}
 .co-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:34px 0 0}
 .co-stat{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:18px 20px;position:relative;overflow:hidden}
 .co-stat::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradient-iris)}
-.co-stat b{display:block;font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.05;color:var(--text-strong)}
+.co-stat b{display:block;font-family:var(--font-display);font-weight:700;font-size:clamp(1.35rem,5.4vw,1.8rem);line-height:1.05;color:var(--text-strong);overflow-wrap:break-word;hyphens:auto}
+@media (max-width:440px){.co-stats{gap:10px}.co-stat{padding:16px 14px}.co-stat b{font-size:1.22rem}}
 .co-stat span{display:block;margin-top:7px;font-size:.78rem;color:var(--text-muted);line-height:1.4}
 .co-wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .co-sec{padding-block:clamp(40px,6vw,72px)}
