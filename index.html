@@ -410,6 +410,27 @@ body.co-open{overflow:hidden}
 .lg-stack{display:flex;flex-direction:column;gap:18px}
 .lsi-gal img{cursor:zoom-in}
 @media (max-width:700px){.lg-row{flex-direction:column}.lg-cell{width:100%}}
+/* Hero work tiles: real projects floating around the headline, each opens its case */
+.hero-inner{pointer-events:none}.hero-inner>*{pointer-events:auto}
+.hero-tiles{position:absolute;inset:0;z-index:1}
+.ht{--s:1;position:absolute;width:calc(var(--w) * var(--s));padding:6px;border:0;border-radius:14px;background:var(--white);box-shadow:0 18px 40px rgba(58,21,116,.16),0 3px 8px rgba(58,21,116,.08);cursor:pointer;
+  transform:translate(calc(var(--px,0) * var(--d) * 14px),calc(var(--py,0) * var(--d) * 14px)) rotate(var(--r));transition:transform .6s var(--ease-out),box-shadow var(--dur-base) var(--ease-out);
+  animation:ht-in .9s var(--ease-out) both;animation-delay:calc(var(--i) * 90ms + 150ms)}
+.ht img{display:block;width:100%;height:auto;border-radius:9px}
+.ht:hover,.ht:focus-visible{box-shadow:0 26px 56px rgba(58,21,116,.24),0 4px 10px rgba(58,21,116,.10);transform:translate(calc(var(--px,0) * var(--d) * 14px),calc(var(--py,0) * var(--d) * 14px - 6px)) rotate(0deg) scale(1.04);z-index:2}
+@keyframes ht-in{from{opacity:0;translate:0 24px;scale:.92}to{opacity:1;translate:0 0;scale:1}}
+@media (max-width:1240px){.ht{--s:.78}}
+@media (max-width:1120px){.ht{--s:.66}.ht-2,.ht-5{display:none}}
+@media (max-width:860px){
+  .hero{display:flex;flex-direction:column}
+  .hero-tiles{position:relative;inset:auto;order:2;display:flex;justify-content:center;align-items:flex-end;padding:0 16px 56px;margin-top:-56px}
+  .ht{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;--s:1;width:auto;flex:0 1 auto;margin:0 -14px}
+  .ht-1 img,.ht-3 img,.ht-4 img{width:min(26vw,140px)}.ht-2 img{width:min(17vw,88px)}
+  .ht-5,.ht-6{display:none}
+  .ht-1{order:1}.ht-2{order:2;z-index:1}.ht-4{order:3}.ht-3{order:4}
+  .ht-2{display:block}
+}
+@media (prefers-reduced-motion:reduce){.ht{animation:none;transition:box-shadow var(--dur-base) var(--ease-out)}}
 /* Case-study titles in one color; capabilities as open columns, not cards */
 .co-hero h2 .grad{background:none;color:inherit}
 .cap.card{background:none;border:none;box-shadow:none;border-radius:0;padding:20px 0 0;border-top:1px solid var(--border-brand)}
@@ -447,6 +468,14 @@ body.co-open{overflow:hidden}
   <section class="hero">
     <canvas class="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-tiles">
+      <button class="ht ht-1" type="button" data-overlay="lsi-detail" aria-label="Open the LSI Silderma case study" style="left:2%;top:11%;--w:230px;--r:-6deg;--d:.9;--i:1"><img src="lsi-diab.jpg" alt=""></button>
+      <button class="ht ht-2" type="button" data-overlay="reiki-detail" aria-label="Open the Parece Magia Reiki case study" style="left:10%;top:44%;--w:138px;--r:5deg;--d:1.6;--i:2"><img src="pm-reel.jpg" alt=""></button>
+      <button class="ht ht-3" type="button" data-overlay="auto-detail" aria-label="Open the Production automation case study" style="left:3%;bottom:7%;--w:210px;--r:-3deg;--d:1.2;--i:3"><img src="work-cert.jpg" alt=""></button>
+      <button class="ht ht-4" type="button" data-overlay="monchi-detail" aria-label="Open the MONCHI SG Sunglasses brand identity" style="right:2%;top:10%;--w:230px;--r:6deg;--d:1.1;--i:4"><img src="work-monchi.jpg" alt=""></button>
+      <button class="ht ht-5" type="button" data-overlay="lsi-detail" aria-label="Open the LSI Silderma case study" style="right:11%;top:37%;--w:104px;--r:-4deg;--d:1.7;--i:5"><img src="lsi-rollup.jpg" alt=""></button>
+      <button class="ht ht-6" type="button" data-overlay="ds-detail" aria-label="Open the Online Agostina Design System case study" style="right:3%;bottom:8%;--w:215px;--r:3deg;--d:1.3;--i:6"><img src="work-ds.jpg" alt=""></button>
+    </div>
     <div class="hero-inner">
       <p class="hero-status">Open to senior design roles in AI, automation and data</p>
       <h1>I design the brand, then I build the tools that produce it.</h1>
@@ -1438,6 +1467,17 @@ for (var a = 0; a &lt; alumnos.length; a++) {
   function upd(){raf=0;var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0).toFixed(4)+')';}
   addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(upd);},{passive:true});
   addEventListener('resize',upd,{passive:true});upd();
+})();
+</script>
+
+<script>
+/* Hero tiles drift a little with the pointer, at different depths */
+(function(){
+  var hero=document.querySelector('.hero');if(!hero||!window.matchMedia||window.matchMedia('(prefers-reduced-motion: reduce)').matches||!window.matchMedia('(hover: hover)').matches)return;
+  var raf=0,x=0,y=0;
+  hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();x=(e.clientX-r.left)/r.width-.5;y=(e.clientY-r.top)/r.height-.5;
+    if(!raf)raf=requestAnimationFrame(function(){raf=0;hero.style.setProperty('--px',x.toFixed(3));hero.style.setProperty('--py',y.toFixed(3));});},{passive:true});
+  hero.addEventListener('pointerleave',function(){hero.style.setProperty('--px',0);hero.style.setProperty('--py',0);});
 })();
 </script>
 
