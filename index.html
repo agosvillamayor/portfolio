@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;700;800&family=Playfair+Display:ital,wght@1,700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;700;800&family=Fraunces:ital,opsz,wght@0,9..144,800;1,9..144,700&family=Figtree:wght@400;600&family=Playfair+Display:ital,wght@1,700&family=Space+Mono:wght@400;700&display=swap">
 <style>
 /* ============================================================
    Layout concept: light, iridescent editorial portfolio.
@@ -684,6 +684,21 @@ body.co-open{overflow:hidden}
           </div>
         </article>
 
+        <article class="card accent lift case featured">
+          <div class="case-tile">
+            <span class="tag">Design system + AI</span>
+            <img class="photo" loading="lazy" src="work-taller.jpg" alt="Taller Listo sticker logo next to three Instagram carousel slides in wine, pink and magenta">
+          </div>
+          <div class="case-body">
+            <p class="case-role">Own brand · system · AI production · 2026</p>
+            <h3>Taller Listo</h3>
+            <p class="case-desc">My own service for people who teach online workshops. I designed the brand, then turned it into a design system written for an AI agent to read: tokens, voice, layout and sales rules. With it, I produce carousels, stories and the landing page with Claude, and art direct every piece.</p>
+            <p class="case-impact">One designer, 100+ on-brand pieces, one system.</p>
+            <div class="case-stack"><span class="chip">Design system</span><span class="chip">Claude</span><span class="chip">Social content</span></div>
+            <a class="case-link" href="#taller-detail" data-overlay="taller-detail">See how it works</a>
+          </div>
+        </article>
+
         <article class="card accent lift case featured reverse">
           <div class="case-tile">
             <span class="tag">Concept project</span>
@@ -1154,6 +1169,118 @@ for (var a = 0; a &lt; alumnos.length; a++) {
 --surface-page: var(--ink-50);
 --text-strong:  var(--ink-900);
 --brand:        var(--violet-500);</pre>
+      </div>
+      <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
+    </div></section>
+  </section>
+
+  <section id="taller-detail" class="co" hidden aria-hidden="true">
+    <div class="co-bar">
+      <span class="ttl"><img loading="lazy" src="logo-mark.png" alt="">Taller Listo — case study</span>
+      <button class="co-close" type="button" data-close-overlay>Close</button>
+    </div>
+    <div class="co-hero"><div class="inner">
+      <p class="eyebrow">Case study · Own brand · Design system + AI</p>
+      <h2>Taller <span class="grad">Listo</span></h2>
+      <p class="co-sub">A brand built as a system, so AI can produce it on-brand</p>
+      <p class="co-intro">Taller Listo is my own service for people who teach online workshops: the full kit to sell a workshop, teach it and sell it again. A one-person brand needs a lot of content, so I designed it to scale from day one. I made the core pieces by hand, then documented the brand as a design system an AI agent can read and follow. With that system, I produce the rest with Claude: carousels, stories, highlight covers and the landing page, while I art direct and review every piece.</p>
+      <div class="co-stats">
+        <div class="co-stat"><b>9 + 11</b><span>Color tokens and type styles</span></div>
+        <div class="co-stat"><b>18</b><span>Brand stickers as iconography</span></div>
+        <div class="co-stat"><b>100+</b><span>Pieces produced from the system</span></div>
+        <div class="co-stat"><b>1 README</b><span>The brief the agent reads first</span></div>
+      </div>
+    </div></div>
+
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">The workflow</p><h2 class="display h2">How I work with AI, step by step</h2></div>
+      <p class="lede" style="margin-top:14px">The AI doesn't choose the look. The system does, and I designed the system. That's what keeps a hundred pieces looking like one brand.</p>
+      <div class="co-wl">
+        <div class="it"><span class="n">01</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="m14 7 3 3"/></svg></span><h3>Design the core by hand</h3><p>The sticker logo, a set of 18 stickers and the first carousels, so the brand had a real visual voice before any automation.</p></div>
+        <div class="it"><span class="n">02</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/></svg></span><h3>Extract the system</h3><p>Colors sampled from the finished pieces and every size measured on the 1080px canvas, saved as named tokens with a usage note each.</p></div>
+        <div class="it"><span class="n">03</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2z"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h4"/></svg></span><h3>Write the rules down</h3><p>Voice in Rioplatense Spanish, contrast-checked color pairs, slide patterns, sticker placement and sales rules, like "prices never go in carousels".</p></div>
+        <div class="it"><span class="n">04</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/></svg></span><h3>Produce with Claude</h3><p>The agent reads the README and the tokens first, then lays out carousels, stories, highlight covers and the landing page inside the system.</p></div>
+        <div class="it"><span class="n">05</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/><path d="m8.5 11 1.8 1.8 3.2-3.3"/></svg></span><h3>Art direct and review</h3><p>I check every piece, fix what's off, and write each correction back into the system, so the next batch starts better.</p></div>
+      </div>
+    </div></section>
+
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">The system</p><h2 class="display h2">A sticker logo and a closed palette</h2></div>
+      <div class="co-feature">
+        <div class="media" style="background:#f9f6ea"><img loading="lazy" src="tl-logo.jpg" alt="Taller Listo sticker logo: pink letters with a wine outline and an orange check in place of the O"></div>
+        <div class="fbody">
+          <h3>Warm, playful, tidy</h3>
+          <p>"taller" in lowercase over "LISTO" in caps, with the O replaced by a check. It works like a sticker: white die-cut edge and a flat shadow, placed in a corner of each piece. The whole brand reads like printed stationery.</p>
+          <div class="case-stack"><span class="chip">Logo</span><span class="chip">Stickers</span><span class="chip">Brand voice</span></div>
+        </div>
+      </div>
+      <p class="ds-lab">Brand palette · closed, no blues, greens or greys</p>
+      <div class="ds-swrow">
+        <div class="ds-sw"><div class="ds-chip" style="background:#770523"></div><b>vino</b><span>#770523</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#d81a67"></div><b>magenta</b><span>#d81a67</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#dd4d26"></div><b>naranja</b><span>#dd4d26</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#fad2e1"></div><b>rosa</b><span>#fad2e1</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#f9f6ea"></div><b>crema</b><span>#f9f6ea</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#ffffff"></div><b>blanco</b><span>#ffffff</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#d0d996"></div><b>lima</b><span>#d0d996</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#4a0316"></div><b>vino-profundo</b><span>#4a0316</span></div>
+        <div class="ds-sw"><div class="ds-chip" style="background:#ddcec4"></div><b>sombra-sticker</b><span>#ddcec4</span></div>
+      </div>
+      <p class="ds-lab">Typography · two families, no third</p>
+      <div class="ds-type">
+        <div class="ds-spec"><p class="aa" style="font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:60px;color:#770523">Aa</p><p class="meta">Fraunces · display serif</p><p class="samp" style="font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:700;font-size:22px;color:#d81a67">para vos que enseñás</p></div>
+        <div class="ds-spec"><p class="aa" style="font-family:'Figtree',var(--font-sans);font-weight:600;font-size:58px;color:#770523">Aa</p><p class="meta">Figtree · rounded sans</p><p class="samp" style="font-family:'Figtree',var(--font-sans);font-size:16px">Te armo todo el kit para venderlo, dictarlo y volver a venderlo.</p></div>
+      </div>
+      <figure class="co-zoom" style="margin:24px 0 0"><div class="co-frame"><img loading="lazy" src="tl-stickers.jpg" alt="Sheet of Taller Listo stickers: laptop, diploma, envelope, calendar, megaphone, pencil, heart and more"></div></figure>
+      <p class="co-cap" style="margin-top:12px">The iconography is a sticker set instead of line icons: one or two per piece, always matching the topic.</p>
+    </div></section>
+
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Under the hood</p><h2 class="display h2">Written for an agent to read</h2></div>
+      <p class="lede" style="margin-top:14px">Every token carries a usage note with its contrast ratio, so the agent knows not just the color but where it is allowed. The README is a brand book with concrete rules, not adjectives.</p>
+      <div class="co-codewrap">
+        <div class="co-codebar"><i></i><i></i><i></i><span class="fn">tokens.json · README.md</span></div>
+        <pre class="co-code">{ "name": "magenta", "value": "#d81a67",
+  "usage": "Acento. Chips y etiquetas, fondo de la slide de cierre.
+            Itálica sobre crema (4.55:1); sobre rosa solo 24px+ (3.6:1)." }
+
+{ "name": "titulo-portada", "fontSize": "96px", "fontWeight": 800,
+  "letterSpacing": "-0.02em", "sample": "¿Todavía hacés los certificados a mano?" }
+
+<span class="cm">## Venta y publicación</span>
+- Precios: nunca en los carruseles. Van en historias, en la landing y por DM.
+- Orden: primero contenido de valor que se guarda, después la venta.
+- Cierre: una sola acción. "Comentá TALLER".</pre>
+      </div>
+      <div class="co-callout"><b>Corrections become rules.</b> When I changed where launch prices can appear, I updated the system once, and every piece produced after that followed it.</div>
+    </div></section>
+
+    <section class="co-sec" style="background:var(--surface-tint)"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Featured</p><h2 class="display h2">The landing, from the same tokens</h2></div>
+      <div class="co-feature">
+        <div class="media" style="background:#fad2e1"><img loading="lazy" src="tl-landing.jpg" alt="Taller Listo link-in-bio landing page on mobile, with the logo, contact buttons and the workshop kits with launch prices"></div>
+        <div class="fbody">
+          <h3>Link-in-bio landing</h3>
+          <p>A mobile landing with the kits, launch prices and contact, built from the same palette, type and shapes as the social pieces. It also has a dark mode, derived from the same tokens.</p>
+          <div class="case-stack"><span class="chip">HTML / CSS</span><span class="chip">Design tokens</span><span class="chip">Dark mode</span></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="co-sec"><div class="co-wrap">
+      <div class="section-head"><p class="eyebrow eyebrow-grad">Selected pieces</p><h2 class="display h2">Content that looks like one brand</h2></div>
+      <div class="co-gallery">
+        <figure><div class="co-frame"><img loading="lazy" src="tl-venta-01.jpg" alt="Sales carousel cover: Do you still make certificates by hand?"></div><p class="co-cap"><b>Sales carousel · cover</b><br>Opens with the real pain point.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-check-01.jpg" alt="Checklist carousel cover: 7 things your online workshop needs"></div><p class="co-cap"><b>Value carousel · cover</b><br>Saveable content goes out before the sale.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-venta-04.jpg" alt="Carousel slide: the whole journey of your workshop, before, during and after"></div><p class="co-cap"><b>Before · During · After</b><br>The three moments every sales piece follows.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-check-03.jpg" alt="Checklist slide 2 of 7 with a tip box"></div><p class="co-cap"><b>Checklist step</b><br>Big numerals, a tilted Tip box, progress dots.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-venta-03.jpg" alt="Checklist slide listing the 7 things in numbered rows"></div><p class="co-cap"><b>The full list</b><br>Rows and numbered chips from the system.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-venta-10.jpg" alt="Closing slide in magenta: Comment TALLER"></div><p class="co-cap"><b>Closing slide</b><br>Magenta, striped frame, a single call to action.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-historia-2.jpg" alt="Instagram story listing the launch kits and prices"></div><p class="co-cap"><b>Story · kits</b><br>Prices live in stories, never in carousels.</p></figure>
+        <figure><div class="co-frame"><img loading="lazy" src="tl-destacada-kits.jpg" alt="Instagram highlight cover with the laptop sticker in a dotted circle"></div><p class="co-cap"><b>Highlight cover</b><br>Sticker centered in a dotted cream circle.</p></figure>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <a class="co-urlpill" href="https://www.instagram.com/taller.listo/" target="_blank" rel="noopener">@taller.listo &#8599;</a>
       </div>
       <div class="co-back"><button class="btn btn-primary" type="button" data-close-overlay>Back to the portfolio</button></div>
     </div></section>
@@ -1723,6 +1850,41 @@ for (var a = 0; a &lt; alumnos.length; a++) {
    [`Printed mailer boxes, tissue and sticker — "muchas gracias, ya tenés tus lentes favoritos."`,`Cajas impresas, papel de seda y sticker — "muchas gracias, ya tenés tus lentes favoritos."`],
    [`At the market`,`En la feria`],[`Branded lens pouch on the stall, out in the sun.`,`Funda de lentes con la marca en el puesto, al sol.`],
    [`The same logotype holds up off-screen — on cardboard, tissue and fabric. The brand is live and selling: on Instagram, and in the client's own online shop, which she set up herself from the kit I delivered.`,`El mismo logotipo funciona fuera de la pantalla — en cartón, papel y tela. La marca está en vivo y vendiendo: en Instagram, y en la tienda online de la clienta, que ella misma armó con el kit que le entregué.`],
+   [`Design system + AI`,`Design system + IA`],[`Own brand · system · AI production · 2026`,`Marca propia · sistema · producción con IA · 2026`],
+   [`My own service for people who teach online workshops. I designed the brand, then turned it into a design system written for an AI agent to read: tokens, voice, layout and sales rules. With it, I produce carousels, stories and the landing page with Claude, and art direct every piece.`,`Mi propio servicio para quienes dan talleres online. Diseñé la marca y después la convertí en un design system escrito para que lo lea un agente de IA: tokens, voz, diagramación y reglas de venta. Con él produzco carruseles, historias y la landing con Claude, y dirijo cada pieza.`],
+   [`One designer, 100+ on-brand pieces, one system.`,`Una diseñadora, más de 100 piezas de marca, un sistema.`],[`See how it works`,`Ver cómo funciona`],
+   [`Taller Listo — case study`,`Taller Listo — caso de estudio`],[`Case study · Own brand · Design system + AI`,`Caso de estudio · Marca propia · Design system + IA`],
+   [`A brand built as a system, so AI can produce it on-brand`,`Una marca hecha como sistema, para que la IA la produzca sin salirse de marca`],
+   [`Taller Listo is my own service for people who teach online workshops: the full kit to sell a workshop, teach it and sell it again. A one-person brand needs a lot of content, so I designed it to scale from day one. I made the core pieces by hand, then documented the brand as a design system an AI agent can read and follow. With that system, I produce the rest with Claude: carousels, stories, highlight covers and the landing page, while I art direct and review every piece.`,`Taller Listo es mi propio servicio para quienes dan talleres online: el kit completo para vender un taller, dictarlo y volver a venderlo. Una marca de una sola persona necesita mucho contenido, así que la diseñé para escalar desde el primer día. Hice las piezas base a mano y después documenté la marca como un design system que un agente de IA puede leer y seguir. Con ese sistema produzco el resto con Claude: carruseles, historias, portadas de destacadas y la landing, mientras dirijo y reviso cada pieza.`],
+   [`Color tokens and type styles`,`Tokens de color y estilos tipográficos`],[`Brand stickers as iconography`,`Stickers de marca como iconografía`],[`Pieces produced from the system`,`Piezas producidas con el sistema`],[`The brief the agent reads first`,`El brief que el agente lee primero`],
+   [`The workflow`,`El flujo de trabajo`],[`How I work with AI, step by step`,`Cómo trabajo con IA, paso a paso`],
+   [`The AI doesn't choose the look. The system does, and I designed the system. That's what keeps a hundred pieces looking like one brand.`,`La IA no elige la estética. La elige el sistema, y el sistema lo diseñé yo. Eso es lo que hace que cien piezas se vean como una sola marca.`],
+   [`Design the core by hand`,`Diseñar la base a mano`],[`The sticker logo, a set of 18 stickers and the first carousels, so the brand had a real visual voice before any automation.`,`El logo sticker, un set de 18 stickers y los primeros carruseles, para que la marca tuviera una voz visual propia antes de automatizar nada.`],
+   [`Extract the system`,`Extraer el sistema`],[`Colors sampled from the finished pieces and every size measured on the 1080px canvas, saved as named tokens with a usage note each.`,`Colores tomados de las piezas terminadas y cada medida tomada sobre el lienzo de 1080px, guardados como tokens con nombre y una nota de uso cada uno.`],
+   [`Write the rules down`,`Escribir las reglas`],[`Voice in Rioplatense Spanish, contrast-checked color pairs, slide patterns, sticker placement and sales rules, like "prices never go in carousels".`,`Voz en español rioplatense, pares de color con contraste verificado, patrones de slides, ubicación de stickers y reglas de venta, como "los precios nunca van en los carruseles".`],
+   [`Produce with Claude`,`Producir con Claude`],[`The agent reads the README and the tokens first, then lays out carousels, stories, highlight covers and the landing page inside the system.`,`El agente lee primero el README y los tokens, y después diagrama carruseles, historias, portadas de destacadas y la landing dentro del sistema.`],
+   [`Art direct and review`,`Dirigir y revisar`],[`I check every piece, fix what's off, and write each correction back into the system, so the next batch starts better.`,`Reviso cada pieza, corrijo lo que no funciona y vuelco cada corrección al sistema, para que la próxima tanda arranque mejor.`],
+   [`A sticker logo and a closed palette`,`Un logo sticker y una paleta cerrada`],[`Warm, playful, tidy`,`Cálida, juguetona, prolija`],
+   [`"taller" in lowercase over "LISTO" in caps, with the O replaced by a check. It works like a sticker: white die-cut edge and a flat shadow, placed in a corner of each piece. The whole brand reads like printed stationery.`,`"taller" en minúscula sobre "LISTO" en mayúscula, con la O reemplazada por un check. Funciona como un sticker: troquel blanco y sombra plana, pegado en una esquina de cada pieza. Toda la marca se lee como papelería impresa.`],
+   [`Logo`,`Logo`],[`Stickers`,`Stickers`],[`Brand voice`,`Voz de marca`],
+   [`Brand palette · closed, no blues, greens or greys`,`Paleta de marca · cerrada, sin azules, verdes ni grises`],[`Typography · two families, no third`,`Tipografía · dos familias, sin una tercera`],
+   [`Fraunces · display serif`,`Fraunces · serif display`],[`Figtree · rounded sans`,`Figtree · sans redondeada`],
+   [`The iconography is a sticker set instead of line icons: one or two per piece, always matching the topic.`,`La iconografía es un set de stickers en lugar de íconos de línea: uno o dos por pieza, siempre acompañando el tema.`],
+   [`Written for an agent to read`,`Escrito para que lo lea un agente`],
+   [`Every token carries a usage note with its contrast ratio, so the agent knows not just the color but where it is allowed. The README is a brand book with concrete rules, not adjectives.`,`Cada token lleva una nota de uso con su contraste, así el agente sabe no solo el color sino dónde se puede usar. El README es un manual de marca con reglas concretas, no adjetivos.`],
+   [`Corrections become rules.`,`Las correcciones se vuelven reglas.`],[`When I changed where launch prices can appear, I updated the system once, and every piece produced after that followed it.`,`Cuando cambié dónde pueden aparecer los precios de lanzamiento, actualicé el sistema una sola vez y todas las piezas producidas después lo respetaron.`],
+   [`The landing, from the same tokens`,`La landing, con los mismos tokens`],[`Link-in-bio landing`,`Landing link-in-bio`],
+   [`A mobile landing with the kits, launch prices and contact, built from the same palette, type and shapes as the social pieces. It also has a dark mode, derived from the same tokens.`,`Una landing mobile con los kits, los precios de lanzamiento y el contacto, hecha con la misma paleta, tipografía y formas que las piezas de redes. También tiene modo oscuro, derivado de los mismos tokens.`],
+   [`Design tokens`,`Design tokens`],[`Dark mode`,`Modo oscuro`],
+   [`Content that looks like one brand`,`Contenido que se ve como una sola marca`],
+   [`Sales carousel · cover`,`Carrusel de venta · portada`],[`Opens with the real pain point.`,`Arranca por el dolor real.`],
+   [`Value carousel · cover`,`Carrusel de valor · portada`],[`Saveable content goes out before the sale.`,`El contenido que se guarda sale antes que la venta.`],
+   [`Before · During · After`,`Antes · Durante · Después`],[`The three moments every sales piece follows.`,`Los tres momentos que sigue cada pieza de venta.`],
+   [`Checklist step`,`Paso del checklist`],[`Big numerals, a tilted Tip box, progress dots.`,`Numerales grandes, una caja de Tip inclinada, puntitos de progreso.`],
+   [`The full list`,`La lista completa`],[`Rows and numbered chips from the system.`,`Filas y chips numerados del sistema.`],
+   [`Closing slide`,`Slide de cierre`],[`Magenta, striped frame, a single call to action.`,`Magenta, marco rayado, un solo llamado a la acción.`],
+   [`Story · kits`,`Historia · kits`],[`Prices live in stories, never in carousels.`,`Los precios van en historias, nunca en carruseles.`],
+   [`Highlight cover`,`Portada de destacada`],[`Sticker centered in a dotted cream circle.`,`Sticker centrado en un círculo crema punteado.`],
   ];
   var T={};for(var pi=0;pi<P.length;pi++){T[P[pi][0]]=P[pi][1];}
   var SKIPCLASS=['cg-read','co-code','co-input','co-codebar','fn','co-urlpill','brand','email'];
