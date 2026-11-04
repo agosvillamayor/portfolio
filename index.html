@@ -541,6 +541,62 @@ body.co-open{overflow:hidden}
       </div>
     </div>
   </section>
+<!-- ===== REEL BAND — pegar justo debajo del hero, antes de "Where design meets engineering" ===== -->
+<style>
+  .reel { padding: clamp(40px, 7vw, 96px) 0; }
+  .reel__inner { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+  .reel__head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .reel__eyebrow { font: 700 12px/1 'Montserrat', sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--violet-600, #7c3aed); margin: 0; }
+  .reel__meta { font: 500 13px/1.4 'Montserrat', sans-serif; color: var(--ink-500, #757181); margin: 0; }
+  .reel__frame { position: relative; border-radius: 24px; overflow: hidden; background: #9465fd; aspect-ratio: 16 / 9;
+                 box-shadow: 0 30px 80px rgba(58, 21, 116, .18); }
+  .reel__video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .reel__frame::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px;
+                        background: var(--gradient-iris, linear-gradient(115deg,#9465fd,#9593ff 16%,#bcf3c8 34%,#feed7a 52%,#ffb6ad 70%,#ffbdc5 84%,#c784ff)); }
+  .reel__toggle { position: absolute; right: 16px; bottom: 22px; width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+                  background: rgba(255,255,255,.92); color: #1d1b26; display: grid; place-items: center; box-shadow: 0 6px 18px rgba(58,21,116,.25); }
+  .reel__toggle:focus-visible { outline: 3px solid #9465fd; outline-offset: 3px; }
+</style>
+
+<section class="reel" id="reel" aria-label="Showreel">
+  <div class="reel__inner">
+    <div class="reel__head">
+      <p class="reel__eyebrow">The 30-second reel</p>
+      <p class="reel__meta">Design · Automation · AI · Data · Tools I built</p>
+    </div>
+    <div class="reel__frame">
+      <video class="reel__video" id="reelVideo" muted loop playsinline preload="metadata"
+             poster="/assets/showreel-poster.jpg" aria-label="Showreel of Agostina Villamayor: design, automation, AI, data and tools she built">
+        <source src="/assets/showreel-web.webm" type="video/webm">
+        <source src="/assets/showreel-web.mp4" type="video/mp4">
+      </video>
+      <button class="reel__toggle" id="reelToggle" type="button" aria-label="Pause reel">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="3" y="2" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="11" y="2" width="4" height="14" rx="1.2" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var v = document.getElementById('reelVideo'), b = document.getElementById('reelToggle');
+  if (!v || !b) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches, userPaused = reduce;
+  var ICON_PAUSE = '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="3" y="2" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="11" y="2" width="4" height="14" rx="1.2" fill="currentColor"/></svg>';
+  var ICON_PLAY  = '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M5 2.5v13l11-6.5z" fill="currentColor"/></svg>';
+  function sync() { var p = v.paused; b.innerHTML = p ? ICON_PLAY : ICON_PAUSE; b.setAttribute('aria-label', p ? 'Play reel' : 'Pause reel'); }
+  // play only while visible (saves battery/data), and never if the visitor asked for reduced motion
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting && !userPaused) { v.play().catch(function () {}); }
+      else { v.pause(); }
+      sync();
+    });
+  }, { threshold: 0.35 }).observe(v);
+  b.addEventListener('click', function () { if (v.paused) { userPaused = false; v.play().catch(function(){}); } else { userPaused = true; v.pause(); } sync(); });
+  sync();
+})();
+</script>
 
   <section class="section" id="work">
     <div class="wrap wrap-wide">
